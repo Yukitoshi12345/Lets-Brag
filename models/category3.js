@@ -36,7 +36,7 @@ Category3.init(
         Category3_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'category1',
+                model: 'category3',
                 key: 'id'
             },
         },
@@ -47,8 +47,8 @@ Category3.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        // Update category1 name
-        modelName: 'Category1',
+        // Update category3 name
+        modelName: 'Category3',
     }
 );
 
