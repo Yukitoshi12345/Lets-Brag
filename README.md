@@ -37,7 +37,7 @@
 ## Usage
 | Steps                | Details                                                                  |
 | -------------------- | ------------------------------------------------------------------------ |
-| Live application |  [Name of Project](https://yukitoshi12345.github.io/project-2/)                                                           |
+| Live application |  [Name of Project](https://yukitoshi12345.github.io/Project-2/)                                                           |
 | Clone this repo      | ` git clone git@github.com:Yukitoshi12345/name-of-project.git` |
 | run on vs | ` cd .. `                                                           |
 
@@ -63,7 +63,7 @@ npm i sequelize
 npm i dotenv
 `
 
-Go to .env.copy file, rename it to .env, and fill in your MySQL password.
+Go to .env.copy file, rename it to .env, and input your MySQL password.
 
 #### Start running
 `
