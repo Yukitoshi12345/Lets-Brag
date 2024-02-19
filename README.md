@@ -23,8 +23,10 @@
 
 ## Technologies Used
 - JavaScript
+- MySQL
 - Node.js
 - Express.js (version 4.18.2)
+- MySQL2 (version 3.9.1)
 - Sequelize (version 6.37.1)
 - Dotenv (version 16.4.4)
 
