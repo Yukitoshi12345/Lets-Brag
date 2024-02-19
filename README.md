@@ -62,6 +62,7 @@ npm i sequelize
 `
 npm i dotenv
 `
+
 Go to .env.copy file, rename it to .env, and fill in your MySQL password.
 
 #### Start running
