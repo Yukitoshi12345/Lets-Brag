@@ -1,6 +1,10 @@
+// Import the Express router to create a new router instance
 const router = require('express').Router();
+
+// Import the database connection from the configuration file
 const sequelize = require('../../config/connection');
 
+// Import specific models from the models directory
 const { testEg1, testEg2, testEg3 } = require('../../models')
 
 
