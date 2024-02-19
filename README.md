@@ -8,6 +8,8 @@
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Test Instruction](#test-instruction)
 - [Screenshots](#screenshots)
 - [Contribution/Roles](#contributionroles)
 - [Installation Instruction](#installation-instruction)
@@ -32,6 +34,41 @@
 - Sequelize (version 6.37.1)
 - Dotenv (version 16.4.4)
 
+## Usage
+| Steps                | Details                                                                  |
+| -------------------- | ------------------------------------------------------------------------ |
+| Live application |  [Name of Project](https://yukitoshi12345.github.io/project-2/)                                                           |
+| Clone this repo      | ` git clone git@github.com:Yukitoshi12345/name-of-project.git` |
+| run on vs | ` cd .. `                                                           |
+
+## Test Instruction
+#### Command to Install Node:
+`
+npm install
+`
+#### Command to install Express dependencies:
+`
+npm i express
+`
+#### Command to install MySQL2 dependencies:
+`
+npm i mysql2
+`
+#### Command to install Sequelize dependencies:
+`
+npm i sequelize
+`
+#### Command to install Dotenv dependencies:
+`
+npm i dotenv
+`
+Go to .env.copy file, rename it to .env, and fill in your MySQL password.
+
+#### Start running
+`
+npm start
+`
+
 ## Screenshots
 ![]()
 
@@ -40,15 +77,15 @@
 | --------------------                                          | -------------------------    |---------------------------------------------  	|
 | [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345)  | Role	   | Task<br> Task<br> Task<br>Task|
 | [Name](https://github.com/name)                  | Role                    | Task |
-| [Name](https://github.com/name)                | Task     			   | Task<br> Task  |
-| [Name](https://github.com/Task)            | Task   |  Task <br> Task <br> Task|
+| [Name](https://github.com/name)                | Role     			   | Task<br> Task  |
+| [Name](https://github.com/Task)            | Role   |  Task <br> Task <br> Task|
 
 *The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding.*
 
 ## Installation Instruction
 - [Install nodejs and npm](https://nodejs.org/en/download) 
-- Install Insomnia?
-- Install MySQL?
+- [Install Insomnia](https://insomnia.rest/download)
+- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
 
 
 ## License [update link as the title of project change]
