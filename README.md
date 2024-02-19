@@ -5,16 +5,31 @@
 ## Table of Contents
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
+- [Technologies Used](#technologies-used)
 - [Screenshots](#screenshots)
 - [Contribution/Roles](#contributionroles)
 - [Installation Instruction](#installation-instruction)
 - [License](#license)
 
 ## User Story
+```md
+
+```
 
 ## Acceptance Criteria
+```md
+
+```
+
+## Technologies Used
+- JavaScript
+- Node.js
+- Express.js (version 4.18.2)
+- Sequelize (version 6.37.1)
+- Dotenv (version 16.4.4)
 
 ## Screenshots
+![]()
 
 ## Contribution/Roles
 | Contributors                                                  | Roles                        | Task
