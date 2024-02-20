@@ -1,4 +1,4 @@
-![JavaScript](https://img.shields.io/badge/JavaScript-orange)  ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-handlebars@7.1.2](https://img.shields.io/badge/Express-handlebars@7.1.2-lightgreen) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-yellow) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.4](https://img.shields.io/badge/Dotenv@16.4.4-grey) 
+![JavaScript](https://img.shields.io/badge/JavaScript-orange)  ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![ExpressHandlebars@7.1.2](https://img.shields.io/badge/ExpressHandlebars@7.1.2-yellow) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.4](https://img.shields.io/badge/Dotenv@16.4.4-grey) 
 
 <h1 align ="center">Project 2</h1>
 
@@ -27,7 +27,6 @@
 
 ## Technologies Used
 - JavaScript
-- MySQL
 - Node.js
 - Express.js (version 4.18.2)
 - Express-handlebars (version 7.1.2)
