@@ -42,7 +42,7 @@
 | run on vs | ` cd .. `                                                           |
 
 ## Test Instruction
-#### Command to Install Node:
+#### Command to install packages and any packages it depends on:
 `
 npm install
 `
