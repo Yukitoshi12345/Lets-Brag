@@ -1,4 +1,4 @@
-![JavaScript](https://img.shields.io/badge/JavaScript-orange)  ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![ExpressHandlebars@7.1.2](https://img.shields.io/badge/ExpressHandlebars@7.1.2-yellow) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.4](https://img.shields.io/badge/Dotenv@16.4.4-grey) 
+![CSS](https://img.shields.io/badge/CSS-red) ![JavaScript](https://img.shields.io/badge/JavaScript-orange) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-hotpink) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-sandybrown) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Connect-Session-Sequelize@7.1.7](https://img.shields.io/badge/Connect_Session_Sequelize@7.1.7-lavender) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) 
 
 <h1 align ="center">Project 2</h1>
 
@@ -26,13 +26,17 @@
 ```
 
 ## Technologies Used
+- CSS
 - JavaScript
 - Node.js
+- Bcrypt (version 5.1.1)
 - Express.js (version 4.18.2)
-- Express-handlebars (version 7.1.2)
+- Express-Handlebars (version 7.1.2)
+- Express-Session (version 1.18.0)
 - MySQL2 (version 3.9.1)
 - Sequelize (version 6.37.1)
-- Dotenv (version 16.4.4)
+- Connect Session Sequelize (version 7.1.7)
+- Dotenv (version 16.4.5)
 
 ## Usage
 | Steps                | Details                                                                  |
