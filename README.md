@@ -37,6 +37,9 @@
 - Sequelize (version 6.37.1)
 - Connect Session Sequelize (version 7.1.7)
 - Dotenv (version 16.4.5)
+- Eslint (version 8.57.0)
+- Eslint Config Prettier (version 9.1.0)
+- Prettier (version 3.2.5)
 
 ## Usage
 | Steps                | Details                                                                  |
@@ -89,6 +92,25 @@ npm i connect-session-sequelize
 npm i dotenv
 `
 
+#### Command to install Eslint Dev dependencies:
+`
+npm i eslint --save-dev
+`
+
+#### Command to install Eslint-config-prettier Dev dependencies:
+`
+npm i eslint-config-prettier --save-dev
+`
+
+#### Command to install Prettier Dev dependencies:
+`
+npm i prettier --save-dev
+`
+
+#### Run seed:
+`
+npm run seed
+`
 
 #### Start running:
 `
