@@ -1,17 +1,17 @@
-![CSS](https://img.shields.io/badge/CSS-red) ![JavaScript](https://img.shields.io/badge/JavaScript-orange) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-hotpink) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-sandybrown) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Connect-Session-Sequelize@7.1.7](https://img.shields.io/badge/Connect_Session_Sequelize@7.1.7-lavender) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey)
+![CSS](https://img.shields.io/badge/CSS-red) ![JavaScript](https://img.shields.io/badge/JavaScript-orange) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-hotpink) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-sandybrown) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Connect-Session-Sequelize@7.1.7](https://img.shields.io/badge/Connect_Session_Sequelize@7.1.7-lavender) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) 
 
 <h1 align ="center">Project 2</h1>
 
 [Add description]
 
 ## Table of Contents
-
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [Test Instruction](#test-instruction)
 - [Screenshots](#screenshots)
+- [Output](#output)
 - [Contribution/Roles](#contributionroles)
 - [Installation Instruction](#installation-instruction)
 - [License](#license)
@@ -29,7 +29,6 @@
 ```
 
 ## Technologies Used
-
 - CSS
 - JavaScript
 - Node.js
@@ -41,9 +40,6 @@
 - Sequelize (version 6.37.1)
 - Connect Session Sequelize (version 7.1.7)
 - Dotenv (version 16.4.5)
-- Eslint (version 8.57.0)
-- Eslint Config Prettier (version 9.1.0)
-- Prettier (version 3.2.5)
 
 ## Usage
 
@@ -114,6 +110,8 @@
 ## Screenshots
 
 ![]()
+
+## Output
 
 ## Contribution/Roles
 
