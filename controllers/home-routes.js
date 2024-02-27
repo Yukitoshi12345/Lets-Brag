@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     });
 
     const galleries = dbGalleryData.map((gallery) =>
-      gallery.get({ plain: true })
+      gallery.get({ plain: true }),
     );
 
     res.render('homepage', {

@@ -12,32 +12,27 @@ Category2.init(
       autoIncrement: true,
     },
     [category_name]: {
-        // Insert information
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
-    
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
     // Rename Category 2
     Category2_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'category2',
-            key: 'id'
-        },
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'category2',
+        key: 'id',
+      },
     },
   },
   {
@@ -48,7 +43,7 @@ Category2.init(
     underscored: true,
     // Update category2 name
     modelName: 'category2',
-  }
+  },
 );
 
 // Rename Category2

@@ -13,24 +13,19 @@ Category1.init(
       autoIncrement: true,
     },
     [category_name]: {
-        // Insert information
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
-    
+      // Insert information
     },
     [category_name]: {
-        // Insert information
-
+      // Insert information
     },
   },
   {
@@ -41,7 +36,7 @@ Category1.init(
     underscored: true,
     // Update category1 name
     modelName: 'Category1',
-  }
+  },
 );
 
 // Rename Category1
