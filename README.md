@@ -2,7 +2,8 @@
 
 <h1 align ="center">Let's Brag!</h1>
 
-[Add description]
+Tired of keeping your achievements under wraps? Introducing Let’s Brag, the social media platform dedicated to celebrating your wins, big and small. Share your accomplishments, travel adventures, and anything else you are proud of with a community that encourages self-expression and positive vibes. Earn “brag points” for your posts, with the top 5 users taking centre stage on the front page to inspire others and soak up some well-deserved recognition. Let’s Brag: where your achievements shine bright.
+
 
 ## Table of Contents
 - [User Story](#user-story)
@@ -19,12 +20,23 @@
 ## User Story
 
 ```md
-
+As a driven individual who thrives on recognition
+I want a user-friendly social media platform dedicated to celebrating achievements, where I can  share my successes and experiences with a supportive community.
+So that I can receive positive feedback, inspire others, and feel a sense of belonging.
 ```
 
 ## Acceptance Criteria
 
 ```md
+GIVEN the user has installed the app,
+WHEN the user opens the app
+THEN I am presented with a feed of curated content showcasing other user’s achievements
+WHEN the user clicks on the star rating icons
+THEN the star illuminate dynamically, reflecting the user’s chosen rating
+WHEN the user clicks on the text box below a post
+THEN text box expands and becomes fully editable, allowing them to type their comment
+WHEN the user clicks the “Post” button
+THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements.
 
 ```
 
@@ -122,7 +134,7 @@
 | [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Role  | Task<br> Task                  |
 | [Suyash Maharjan](https://github.com/simplesuyash)                              | Role  | Task <br> Task <br> Task       |
 
-_The roles mentioned above are rough representation of individual member's tasks. Thoroughout the project, we all collaborated and contributed to each other's coding._
+_The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
 ## Installation Instruction
 
