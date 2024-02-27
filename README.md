@@ -45,7 +45,7 @@
 
 | Steps            | Details                                                        |
 | ---------------- | -------------------------------------------------------------- |
-| Live application | [Name of Project](https://yukitoshi12345.github.io/lets-brag/) |
+| Live application | [Let's Brag!](https://yukitoshi12345.github.io/lets-brag/) |
 | Clone this repo  | ` git clone git@github.com:Yukitoshi12345/lets-brag.git` |
 | run on vs        | `cd ..`                                                        |
 
