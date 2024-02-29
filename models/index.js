@@ -1,24 +1,27 @@
-const Category1 = require('./category1');
-const Category2 = require('./category2');
+const Brag = require('./brag');
+const Comment = require('./comment');
 const Category3 = require('./category3');
+const Category4 = require('./category4');
+const Category5 = require('./category5');
+const Category6 = require('./category6');
 
 // Examples which we can edit:
-Category1.hasOne(Category2, {
-  foreignKey: 'category1_id',
+Brag.hasOne(Comment, {
+  foreignKey: 'brag_id',
   onDelete: 'CASCADE',
 });
 
-Category2.belongsTo(Category1, {
-  foreignKey: 'category1_id',
+Comment.belongsTo(Brag, {
+  foreignKey: 'brag_id',
 });
 
-Category1.hasMany(Category3, {
-  foreignKey: 'category1_id',
+Brag.hasMany(Category3, {
+  foreignKey: 'brag_id',
   onDelete: 'CASCADE',
 });
 
-Category3.belongsTo(Category1, {
-  foreignKey: 'category1_id',
+Category3.belongsTo(Brag, {
+  foreignKey: 'brag_id',
 });
 
-module.exports = { Category1, Category2, Category3 };
+module.exports = { Brag, Comment, Category3, Category4, Category5, Category6 };

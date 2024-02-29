@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Category2 extends Model {}
+// Rename Category 3 and category_name
+class Category3 extends Model {}
 
-Category2.init(
+Category3.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,11 +27,11 @@ Category2.init(
     [category_name]: {
       // Insert information
     },
-    // Rename Category 2
-    Category2_id: {
+    // Rename Category 3
+    Category3_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'category2',
+        model: 'category3',
         key: 'id',
       },
     },
@@ -38,13 +39,13 @@ Category2.init(
   {
     sequelize,
     // timestamps true or false?
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    // Update category2 name
-    modelName: 'category2',
+    // Update category3 name
+    modelName: 'Category3',
   },
 );
 
-// Rename Category2
-module.exports = Category2;
+// Rename Category3
+module.exports = Category3;

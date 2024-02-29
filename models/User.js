@@ -9,7 +9,10 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+// username unique
+// email unique
+// password not unique
+// we go for minimum -> no first name and last name.
 User.init(
   {
     id: {
@@ -21,6 +24,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
