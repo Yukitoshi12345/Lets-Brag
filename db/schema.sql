@@ -1,7 +1,7 @@
--- Checking if a database named "[name]_db" already exists and drops it if so. 
+-- Checking if a database named "dev_db" already exists and drops it if so. 
 -- This prevents error if trying to create a database
-DROP DATABASE IF EXISTS [name]_db;
+DROP DATABASE IF EXISTS dev_db;
 
--- Creates a new database named "[name]_db"
--- This establishes the database to store [name] tracker information
-CREATE DATABASE [name]_db;
+-- Creates a new database named "dev_db"
+-- This establishes the database to store development tracker information
+CREATE DATABASE dev_db;

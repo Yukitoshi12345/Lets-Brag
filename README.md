@@ -21,7 +21,7 @@ Tired of keeping your achievements under wraps? Introducing Let’s Brag, the so
 
 ```md
 As a driven individual who thrives on recognition
-I want a user-friendly social media platform dedicated to celebrating achievements, where I can  share my successes and experiences with a supportive community.
+I want a user-friendly social media platform dedicated to celebrating achievements, where I can share my successes and experiences with a supportive community.
 So that I can receive positive feedback, inspire others, and feel a sense of belonging.
 ```
 
