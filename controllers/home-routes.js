@@ -1,7 +1,7 @@
 // Example from class
 
 const router = require('express').Router();
-const { Brag, Comment, Category3, Category4, Category5, Category6 } = require('../models');
+const { Brag, Comment, User, Category3, Category4, Category5, Category6 } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -13,6 +13,10 @@ router.get('/', async (req, res) => {
         {
           model: Comment,
           attributes: ['filename', 'description'],
+        },
+        {
+          model: User,
+          attributes: ['name'],
         },
       ],
     });
@@ -40,13 +44,17 @@ router.get('/brag/:id', withAuth, async (req, res) => {
         {
           model: Comment,
           attributes: [
-            'id',
+            // 'id',
             'title',
-            '',
-            '',
+            'description',
+            'category_name',
             '',
             '',
           ],
+        },
+        {
+          model: User,
+          attributes: ['name'],
         },
       ],
     });
