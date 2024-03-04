@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const dayjs = require('dayjs');
 
 class Comment extends Model {}
 
@@ -18,6 +19,7 @@ Comment.init(
     comment_date: {
       type: DataTypes.DATE,
       allowNull: false,
+      defaultValue: dayjs().format('YYYY-MM-DD hh:mm:ss')
     },
     brag_id: {
       type: DataTypes.INTEGER,
