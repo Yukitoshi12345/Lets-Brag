@@ -7,6 +7,8 @@ const sequelize = require('../../config/connection');
 // Import specific models from the models directory
 const { Brag, User, Comment } = require('../../models');
 
+const withAuth = require("../../utils/auth");
+
 // Create new comment with description, category_name...
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -47,7 +49,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
-// Delete comment by id
+// Delete comment by id - it this necessary?
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const commentData = await Comment.destroy({
