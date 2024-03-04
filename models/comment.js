@@ -11,40 +11,40 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    [username]: {
-      // Insert information
+    content: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    [description]: {
-      // Insert information
+    comment_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
-    [date/time]: {
-      // Insert information
-    },
-    [maybe upvote/downvote]: {
-      // Insert information
-    },
-    [category_name]: {
-      // Insert information
-    },
-    // Rename Category 2
-    Category2_id: {
+    brag_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'comment',
+        model: 'brag',
         key: 'id',
+        unique: false
+      },
+    },
+    commenter_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+        unique: false
       },
     },
   },
   {
     sequelize,
-    // timestamps true or false?
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    // Update category2 name
     modelName: 'comment',
-  },
+  }
 );
+
 
 // Rename Category2
 module.exports = Comment;
