@@ -20,7 +20,7 @@ Comment.init(
         isFloat: true,
         max: 5,
         min: 0
-      },
+      }
     },
 
     brag_id: {
@@ -28,7 +28,7 @@ Comment.init(
       references: {
         model: 'brag',
         key: 'id',
-      },
+      }
     },
     rater_id: {
       type: DataTypes.INTEGER,
@@ -44,7 +44,7 @@ Comment.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'rating',
-  },
+  }
 );
 
 module.exports = Rating;

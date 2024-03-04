@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Comment extends Model {}
-// We dont rate comments out of 5
+
 Comment.init(
   {
     id: {
@@ -23,17 +23,15 @@ Comment.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'brag',
-        key: 'id',
-        unique: false
-      },
+        key: 'id'
+      }
     },
     commenter_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
-        unique: false
-      },
+      }
     },
   },
   {
@@ -46,5 +44,5 @@ Comment.init(
 );
 
 
-// Rename Category2
+
 module.exports = Comment;
