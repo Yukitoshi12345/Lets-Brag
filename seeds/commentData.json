@@ -1,0 +1,38 @@
+[
+    {
+        "content" : "How much did that expedition cost you bro?",
+        "comment_date": "2023-08-27 09:15:00",
+        "brag_id": "1",
+        "commenter_id": "2"
+    },
+    {
+        "content" : "I want to go there so badly too!",
+        "comment_date": "2023-09-02 19:25:00",
+        "brag_id": "1",
+        "commenter_id": "3"
+    },
+    {
+        "content" : "Bahamas is in my bucket list too!",
+        "comment_date": "2023-09-17 11:15:00",
+        "brag_id": "2",
+        "commenter_id": "3"
+    },
+    {
+        "content" : "Been there, done that. What's a big deal?",
+        "comment_date": "2023-09-12 14:36:00",
+        "brag_id": "2",
+        "commenter_id": "4"
+    },
+    {
+        "content" : "Bravo!",
+        "comment_date": "2024-01-19 16:15:00",
+        "brag_id": "3",
+        "commenter_id": "1"
+    },
+    {
+        "content" : "Wow, truly impressive!",
+        "comment_date": "2024-01-20 07:43:00",
+        "brag_id": "3",
+        "commenter_id": "2"
+    }
+]
