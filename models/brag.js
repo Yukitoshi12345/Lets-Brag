@@ -25,6 +25,14 @@ Brag.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: true,
+        notEmpty: true
+      }
+    },
     content: {
       type: DataTypes.TEXT,
       allowNull: false,
