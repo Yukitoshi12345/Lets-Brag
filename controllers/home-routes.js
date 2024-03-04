@@ -26,6 +26,39 @@ router.get('/', async (req, res) => {
     );
 
     res.render('homepage', {
+      brag,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Get all brags by the category ??
+router.get('/brag?category=category', async (req, res) => {
+  try {
+    const dbBragData = await Brag.findAll({
+      where: {
+        category_name: req.params.category,
+      },
+      include: [
+        {
+          model: Comment,
+          attributes: ['filename', 'description'],
+        },
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const brags = dbBragData.map((brag) =>
+      brag.get({ plain: true }),
+    );
+
+    res.render('homepage', {
       brags,
       loggedIn: req.session.loggedIn,
     });
@@ -47,9 +80,9 @@ router.get('/brag/:id', withAuth, async (req, res) => {
             // 'id',
             'title',
             'description',
-            'category_name',
-            '',
-            '',
+            // 'category_name',
+            // '',
+            // '',
           ],
         },
         {
