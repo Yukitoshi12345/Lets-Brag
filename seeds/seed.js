@@ -16,7 +16,10 @@ const seedDatabase = async() => {
   });
   console.log('\n----- USERS SEEDED -----\n');
 
-  await Brag.bulkCreate(bragData);
+  await Brag.bulkCreate(bragData, {
+    individualHooks: true,
+    returning: true,
+  });
   console.log('\n----- BRAGS SEEDED -----\n');
 
   await Comment.bulkCreate(commentData);
