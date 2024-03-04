@@ -25,22 +25,33 @@ Brag.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    [titles]: {
-      // Insert information
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: true,
+        notEmpty: true
+      }
     },
-    [content]: {
-      // Insert information
-      // what you did -> description of what you did
+    brag_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
-    [post_date]: {
-      // Insert information
+    photo: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: true,
+        notEmpty: true
+      }
     },
-    [Photo]: {
-      // Insert information
-    },
-    [category_name]: {
-      // Insert information
-    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'user',
+          key: 'id'
+      }
+    }
   },
   {
     sequelize,
