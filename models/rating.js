@@ -1,37 +1,41 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
 
-class Comment extends Model {}
+const sequelize = require('../config/connection.js');
+
+class Rating extends Model {}
 
 Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    content: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
-    comment_date: {
-      type: DataTypes.DATE,
+    rating: {
+      type: DataTypes.FLOAT,
       allowNull: false,
+      defaultValue: 0,
+      validate: {
+        isFloat: true,
+        max: 5,
+        min: 0
+      }
     },
+
     brag_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'brag',
-        key: 'id'
+        key: 'id',
       }
     },
-    commenter_id: {
+    rater_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
-      }
+      },
     },
   },
   {
@@ -39,10 +43,8 @@ Comment.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment',
+    modelName: 'rating',
   }
 );
 
-
-
-module.exports = Comment;
+module.exports = Rating;

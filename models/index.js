@@ -1,27 +1,55 @@
-const Brag = require('./brag');
-const Comment = require('./comment');
-const Category3 = require('./category3');
-const Category4 = require('./category4');
-const Category5 = require('./category5');
-const Category6 = require('./category6');
+const Brag = require('./Brag');
+const Comment = require('./Comment');
+const Rating = require('./Rating');
+const User = require('./User');
 
-// Examples which we can edit:
-Brag.hasOne(Comment, {
+
+//defining Model associations
+
+//Brag<>Comment
+Brag.hasMany(Comment, {
   foreignKey: 'brag_id',
-  onDelete: 'CASCADE',
+  onDelete: 'CASCADE'
 });
-
 Comment.belongsTo(Brag, {
-  foreignKey: 'brag_id',
+  foreignKey: 'brag_id'
 });
 
-Brag.hasMany(Category3, {
-  foreignKey: 'brag_id',
-  onDelete: 'CASCADE',
+//Brag<>User
+User.hasMany(Brag, {
+  foreignKey: 'bragger_id',
+  onDelete: 'CASCADE'
+});
+Brag.belongsTo(User, {
+  foreignKey: 'bragger_id'
 });
 
-Category3.belongsTo(Brag, {
+//Brag<>Rating
+Brag.hasOne(Rating,{
   foreignKey: 'brag_id',
+  onDelete: 'CASCADE'
+});
+Rating.belongsTo(Brag, {
+  foreignKey: 'brag_id'
 });
 
-module.exports = { Brag, Comment, Category3, Category4, Category5, Category6 };
+//User<>Rating
+User.hasOne(Rating,{
+  foreignKey: 'rater_id',
+  onDelete: 'CASCADE'
+});
+Rating.belongsTo(User, {
+  foreignKey: 'rater_id'
+});
+
+//User<>Comment
+User.hasMany(Comment,{
+  foreignKey: 'commenter_id',
+  onDelete: 'CASCADE'
+});
+Comment.belongsTo(User,{
+  foreignKey: 'commenter_id'
+});
+
+
+module.exports = { Brag, Comment, Rating, User };
