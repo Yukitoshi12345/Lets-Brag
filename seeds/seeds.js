@@ -1,10 +1,31 @@
-// update the testEg name
-const testEg1 = require('./testEg1');
-const testEg2 = require('./testEg2');
-const testEg3 = require('./testEg3');
-
 const sequelize = require('../config/connection');
+const { User, Brag, Comment, Rating } = require('../models');
 
-// Async and Await
+const userData = require('./userData.json');
+const bragData = require('./bragData.json');
+const commentData = require('./commentData.json');
+const ratingData = require('./ratingData.json');
 
-// add more {categories}.js in seeds folder
+const seedDatabase = async() => {
+  await sequelize.sync({ force: true });
+  console.log('\n----- DATABASE SYNCED -----\n');
+
+  await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+  console.log('\n----- USERS SEEDED -----\n');
+
+  await Brag.bulkCreate(bragData);
+  console.log('\n----- BRAGS SEEDED -----\n');
+
+  await Comment.bulkCreate(commentData);
+  console.log('\n----- COMMENTS SEEDED -----\n');
+
+  await Rating.bulkCreate(ratingData);
+  console.log('\n----- RATINGS SEEDED -----\n');
+
+  process.exit(0);
+};
+
+seedDatabase();

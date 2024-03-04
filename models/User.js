@@ -52,7 +52,7 @@ User.init(
   },
   {
     hooks: {
-      beforeCreate: async(newUserData) => {
+      beforeCreate: async(newUserData) =>{
         //username first letter capitalizing
         newUserData.username = await capitalize(newUserData.username);
         // In this case, we are taking the user's email address, and making all letters lower case before adding it to the database.
@@ -67,7 +67,7 @@ User.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'user',
-  },
+  }
 );
 
 module.exports = User;
