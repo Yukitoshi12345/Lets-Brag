@@ -7,9 +7,12 @@
             <h2 class=" text-accent">{{ title }}</h2>
             {{>post-info}}
         </div>
-
+        <div>{{>post-stats}}</div>
         <div class="my-4 prose  md:prose-lg lg:prose-xl  min-w-full">
             {{{ content }}}
+        </div>
+        <div>
+            {{>rating-hearts}}
         </div>
         <div class="my-8 shadow-sm p-4">
             <h2 class=" text-accent space-y-4 ">Comments</h2>

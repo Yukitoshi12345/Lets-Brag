@@ -13,13 +13,13 @@ Rating.init(
       allowNull: false,
     },
     rating: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       defaultValue: 0,
       validate: {
-        isFloat: true,
+        isInt: true,
         max: 5,
-        min: 0,
+        min: 1,
       },
     },
 

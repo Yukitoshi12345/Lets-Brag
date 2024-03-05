@@ -11,6 +11,7 @@ module.exports = {
     let words = title.split(' ');
     words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
     return words.join(' ');
-  }
+  },
+  formatNumber: num => parseFloat(num).toFixed(2)
 
 };
