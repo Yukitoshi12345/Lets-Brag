@@ -1,0 +1,79 @@
+<div class='w-8/12 mx-auto'>
+  <form class='bg-gray-900 opacity-95 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4'>
+    <h1 class='font-bold text-lg text-center techBlogForm'>Sign In to Tech Blog!</h1>
+    <div class='mb-4'>
+      <label class='block text-blue-300 py-2 font-bold mb-2' for='email'>
+        Enter your Email Id
+      </label>
+      <input
+        class='peer shadow appearance-none border rounded w-full p-3 placeholder-shown:text-white focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out'
+        id='email'
+        type='email'
+        placeholder='example@email.com'
+        maxlength='50'
+      />
+      <p class='mt-2 invisible peer-invalid:visible text-pink-600 text-sm'>
+        Please provide a valid email.
+      </p>
+
+      {{! -----------------------------------------password }}
+      <div class='pw hidden'>
+        <label class='block text-blue-300 py-2 font-bold mb-2' for='password'>
+          Enter your Password
+        </label>
+        <input
+          class='peer shadow appearance-none border rounded w-full p-3 placeholder-shown:text-white focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out'
+          id='password'
+          type='password'
+          placeholder='YourPassword12!#'
+          pattern='(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&^])[A-Za-z\d@.#$!%*?&]{8,32}'
+          autofocus
+          maxlength='32'
+        />
+        <p class='mt-2 invisible peer-invalid:visible text-pink-600 text-sm'>
+          Please provide a password of 8-32 characters long containing each of
+          uppercase, lowercase, numeric and special characters.
+        </p>
+      </div>
+      {{! -----------------------------------------------Username }}
+      <div class='user hidden'>
+        <label class='block text-blue-300 py-2 font-bold mb-2' for='username'>
+          Enter a Username
+        </label>
+        <input
+          class='peer shadow appearance-none border rounded w-full p-3 placeholder-shown:text-white focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out'
+          id='username'
+          type='text'
+          placeholder='Username'
+          pattern='[a-zA-Z0-9]{1,35}'
+        />
+        <p class='mt-2 invisible peer-invalid:visible text-pink-600 text-sm'>
+          Please provide a valid username.
+        </p>
+      </div>
+
+    </div>
+
+    <div class='flex items-center justify-end gap-4'>
+      <button
+        class='btn btn-accent text-accent-content continue'
+        disabled
+        type='button'
+      > Continue </button>
+      <button
+        class='btn btn-accent text-accent-content signIn hidden'
+        disabled
+        type='button'
+      > Sign In </button>
+      <button
+        class='btn btn-accent text-accent-content signUp hidden'
+        disabled
+        type='button'
+      > Sign Up </button>
+      <button class='btn btn-accent text-accent-content cancel' type='button'>
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
+<script src='/scripts/login.js'></script>
