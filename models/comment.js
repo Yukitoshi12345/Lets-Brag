@@ -19,21 +19,21 @@ Comment.init(
     comment_date: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: dayjs().format('YYYY-MM-DD hh:mm:ss')
+      defaultValue: dayjs().format('YYYY-MM-DD hh:mm:ss'),
     },
     brag_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'brag',
-        key: 'id'
-      }
+        key: 'id',
+      },
     },
     commenter_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
-      }
+      },
     },
   },
   {
@@ -42,9 +42,7 @@ Comment.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'comment',
-  }
+  },
 );
-
-
 
 module.exports = Comment;

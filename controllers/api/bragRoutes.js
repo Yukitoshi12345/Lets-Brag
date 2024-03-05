@@ -37,7 +37,7 @@ router.put('/:id', withAuth, async (req, res) => {
         brag_date: new Date().toJSON(),
         photo: req.body.photo, // link to external URL\file
         // category_name: req.body.category_name,
-        },
+      },
       {
         where: {
           id: req.params.id,
@@ -71,7 +71,7 @@ router.put('/rate/:id', withAuth, async (req, res) => {
     const rate = await Rating.update(
       {
         rating: req.body.rating,
-        },
+      },
       {
         where: {
           //id:  ???, todo find rating by user id

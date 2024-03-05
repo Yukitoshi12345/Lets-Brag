@@ -1,7 +1,7 @@
 // Example from class
 
 const router = require('express').Router();
-const { Brag, Comment, User, Category3, Category4, Category5, Category6 } = require('../models');
+const { Brag, Comment, Rating, User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -21,9 +21,7 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const brags = dbBragData.map((brag) =>
-      brag.get({ plain: true }),
-    );
+    const brags = dbBragData.map((brag) => brag.get({ plain: true }));
 
     res.render('homepage', {
       brag,
@@ -54,9 +52,7 @@ router.get('/brag?category=category', async (req, res) => {
       ],
     });
 
-    const brags = dbBragData.map((brag) =>
-      brag.get({ plain: true }),
-    );
+    const brags = dbBragData.map((brag) => brag.get({ plain: true }));
 
     res.render('homepage', {
       brags,
