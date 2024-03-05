@@ -1,32 +1,32 @@
 [
-    {
-        "rating" : "4",
-        "rater_id": "2",
-        "brag_id" : "1"
-    },
-    {
-        "rating" : "5",
-        "rater_id": "3",
-        "brag_id" : "1"
-    },
-    {
-        "rating" : "3",
-        "rater_id": "3",
-        "brag_id" : "2"
-    },
-    {
-        "rating" : "1",
-        "rater_id": "4",
-        "brag_id" : "2"
-    },
-    {
-        "rating" : "5",
-        "rater_id": "1",
-        "brag_id" : "3"
-    },
-    {
-        "rating" : "5",
-        "rater_id": "2",
-        "brag_id" : "3"
-    }
+  {
+    "rating": "4",
+    "rater_id": "2",
+    "brag_id": "1"
+  },
+  {
+    "rating": "5",
+    "rater_id": "3",
+    "brag_id": "1"
+  },
+  {
+    "rating": "3",
+    "rater_id": "3",
+    "brag_id": "2"
+  },
+  {
+    "rating": "1",
+    "rater_id": "4",
+    "brag_id": "2"
+  },
+  {
+    "rating": "5",
+    "rater_id": "1",
+    "brag_id": "3"
+  },
+  {
+    "rating": "5",
+    "rater_id": "2",
+    "brag_id": "3"
+  }
 ]

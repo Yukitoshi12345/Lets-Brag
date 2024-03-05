@@ -90,7 +90,8 @@ $(window).ready(() => {
           //when user pressed login from home page
           //simply redirect the user back to home page
           window.location.replace('/');
-        } else {//check if to load post detail page
+        } else {
+          //check if to load post detail page
           window.location.replace(`/api/posts/${page}`);
         }
         localStorage.clear();
@@ -122,7 +123,8 @@ $(window).ready(() => {
           //when user pressed login from home page
           //simply redirect the user back to home page
           window.location.replace('/');
-        }else {//check if to load post detail page
+        } else {
+          //check if to load post detail page
           window.location.replace(`/api/posts/${page}`);
         }
         localStorage.clear();
