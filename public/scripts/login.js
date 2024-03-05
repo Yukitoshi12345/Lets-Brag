@@ -26,9 +26,115 @@ $(window).ready(() => {
     return regex.test(input);
   };
 
-  const cancelHandler = async (event) => {
+  const cancelHandler = async () => {
     // event.preventDefault();
     window.location.replace('/');
+  };
+  //handles "continue" click event
+  //data validation is not done here
+  //if user has access to this button,
+  //means email data is already valid
+  const continueHandler = async () => {
+    const email = $.trim(emailEl.val());
+    try {
+      const response = await fetch('/api/users/login/', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      //when valid email is recieved, set it as readonly
+      //then show other form elements
+      emailEl.attr('Readonly', true);
+      passwordEl.focus();
+
+      //if the email exists
+      //show sign in options
+      if (response.ok) {
+        passwordContainer.removeClass('hidden');
+        signInBtn.removeClass('hidden');
+        continueBtn.addClass('hidden');
+        //if the email is new to the system,
+        //show sign up options
+      } else {
+        form.text('Sign Up to Tech Blog!');
+        passwordContainer.removeClass('hidden');
+        usernameContainer.removeClass('hidden');
+        signUpBtn.removeClass('hidden');
+        continueBtn.addClass('hidden');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //handles sign in click event
+  const signInHandler = async () => {
+    const page = JSON.parse(localStorage.getItem('page'));
+    const email = $.trim(emailEl.val());
+    const password = $.trim(passwordEl.val());
+
+    try {
+      const response = await fetch('/api/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.ok) {
+        //check if to load dashboard page
+
+        if (page === 'dashboard') {
+          window.location.replace('/dashboard');
+        } else if (page === 'home') {
+          //when user pressed login from home page
+          //simply redirect the user back to home page
+          window.location.replace('/');
+        }else {//check if to load post detail page
+          window.location.replace(`/api/posts/${page}`);
+        }
+        localStorage.clear();
+      } else {
+        alert('Failed to log in.');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //handles sign up click event
+  const signUpHandler = async () => {
+    const page = JSON.parse(localStorage.getItem('page'));
+    const email = $.trim(emailEl.val());
+    const password = $.trim(passwordEl.val());
+    const username = $.trim(usernameEl.val());
+
+    try {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify({ email, password, username }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      if (response.ok) {
+        if (page === 'dashboard') {
+          window.location.replace('/dashboard/');
+        } else if (page === 'home') {
+          //when user pressed login from home page
+          //simply redirect the user back to home page
+          window.location.replace('/');
+        }
+        //check if to load post detail page
+        else {
+          window.location.replace(`/api/posts/${page}`);
+        }
+        localStorage.clear();
+      } else {
+        alert('Username already taken. Please use another one.');
+        usernameEl.val('');
+        usernameEl.focus();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
   //continue button is enabled when email value is valid
   //unless it is disabled
@@ -75,115 +181,6 @@ $(window).ready(() => {
       }
     }
   };
-  //handles "continue" click event
-  //data validation is not done here
-  //if user has access to this button,
-  //means email data is already valid
-  const continueHandler = async (event) => {
-    const email = $.trim(emailEl.val());
-    try {
-      const response = await fetch('/api/users/login/', {
-        method: 'POST',
-        body: JSON.stringify({ email }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-
-      //when valid email is recieved, set it as readonly
-      //then show other form elements
-      emailEl.attr('Readonly', true);
-      passwordEl.focus();
-
-      //if the email exists
-      //show sign in options
-      if (response.ok) {
-        passwordContainer.removeClass('hidden');
-        signInBtn.removeClass('hidden');
-        continueBtn.addClass('hidden');
-        //if the email is new to the system,
-        //show sign up options
-      } else {
-        form.text('Sign Up to Tech Blog!');
-        passwordContainer.removeClass('hidden');
-        usernameContainer.removeClass('hidden');
-        signUpBtn.removeClass('hidden');
-        continueBtn.addClass('hidden');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  //handles sign in click event
-  const signInHandler = async (event) => {
-    const page = JSON.parse(localStorage.getItem('page'));
-    const email = $.trim(emailEl.val());
-    const password = $.trim(passwordEl.val());
-
-    try {
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      if (response.ok) {
-        //check if to load dashboard page
-
-        if (page === 'dashboard') {
-          window.location.replace('/dashboard');
-        } else if (page === 'home') {
-          //when user pressed login from home page
-          //simply redirect the user back to home page
-          window.location.replace('/');
-        }
-        //check if to load post detail page
-        else {
-          window.location.replace(`/api/posts/${page}`);
-        }
-        localStorage.clear();
-      } else {
-        alert('Failed to log in.');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  //handles sign up click event
-  const signUpHandler = async (event) => {
-    const page = JSON.parse(localStorage.getItem('page'));
-    const email = $.trim(emailEl.val());
-    const password = $.trim(passwordEl.val());
-    const username = $.trim(usernameEl.val());
-
-    try {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ email, password, username }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-      if (response.ok) {
-        if (page === 'dashboard') {
-          window.location.replace(`/dashboard/`);
-        } else if (page === 'home') {
-          //when user pressed login from home page
-          //simply redirect the user back to home page
-          window.location.replace('/');
-        }
-        //check if to load post detail page
-        else {
-          window.location.replace(`/api/posts/${page}`);
-        }
-        localStorage.clear();
-      } else {
-        alert('Username already taken. Please use another one.');
-        usernameEl.val('');
-        usernameEl.focus();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   continueBtn.on('click', continueHandler);
   cancelBtn.on('click', cancelHandler);
   signInBtn.on('click', signInHandler);

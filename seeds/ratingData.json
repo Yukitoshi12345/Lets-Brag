@@ -1,6 +1,6 @@
 [
     {
-        "rating" : "4.5",
+        "rating" : "4",
         "rater_id": "2",
         "brag_id" : "1"
     },
@@ -15,7 +15,7 @@
         "brag_id" : "2"
     },
     {
-        "rating" : "0",
+        "rating" : "1",
         "rater_id": "4",
         "brag_id" : "2"
     },
