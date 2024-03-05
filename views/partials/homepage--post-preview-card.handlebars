@@ -1,0 +1,18 @@
+
+<article class="hero bg-base-200 shadow-xl hover:opacity-70 rounded-md">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+            class="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+            <h1 class=" font-bold text-accent">{{ title }}</h1>
+            {{>post-info}}
+            <div class=" line-clamp-3 prose prose-stone md:prose-lg lg:prose-xl my-8">
+                {{{ content }}}
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-accent text-accent-content readMore" data-id={{ id }}>Read Full Article</button>
+            </div>
+        </div>
+    </div>
+</article>
