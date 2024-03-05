@@ -1,0 +1,24 @@
+<div class='card w-full shadow-xl'>
+  <div class='card-body'>
+    <h2 class='card-title'>
+      <div class='flex-none gap-4 shadow-xl hover:opacity-90'>
+        <div class='avatar inline-block'>
+          <div class='w-12 mask mask-hexagon'>
+            <img
+              src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+            />
+          </div>
+        </div>
+        <div class='inline-block'>
+          <div>
+            {{user.username}}
+          </div>
+          <div>
+            {{formatDate comment_date}}
+          </div>
+        </div>
+      </div>
+    </h2>
+    <div>{{content}}</div>
+  </div>
+</div>
