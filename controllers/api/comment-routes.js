@@ -9,15 +9,14 @@ const { Brag, User, Comment } = require('../../models');
 
 const withAuth = require('../../utils/auth');
 
-// Create new comment with description, category_name...
+// Create new comment with content, brag_id and commenter_id
 router.post('/', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
-      // username: req.body.username,
-      description: req.body.description,
-      category_name: req.body.category_name,
-      date_time: new Date().toJSON(),
-      user_id: req.session.user_id,
+      content: req.body.content,
+      comment_date: new Date().toJSON(),
+      brag_id: req.body.post_id,
+      commenter_id: req.session.user_id,
     });
 
     res.status(200).json(newComment);
@@ -31,15 +30,14 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     const comment = await Comment.update(
       {
-        description: req.body.description,
-        category_name: req.body.category_name,
-        date_time: new Date().toJSON(),
+        content: req.body.content,
+        comment_date: new Date().toJSON(),
         user_id: req.session.user_id,
       },
       {
         where: {
           id: req.params.id,
-          user_id: req.session.user_id,
+          commenter_id: req.session.user_id,
         },
       },
     );
