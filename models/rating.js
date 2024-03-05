@@ -19,8 +19,8 @@ Rating.init(
       validate: {
         isFloat: true,
         max: 5,
-        min: 0
-      }
+        min: 0,
+      },
     },
 
     brag_id: {
@@ -28,7 +28,7 @@ Rating.init(
       references: {
         model: 'brag',
         key: 'id',
-      }
+      },
     },
     rater_id: {
       type: DataTypes.INTEGER,
@@ -44,7 +44,7 @@ Rating.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'rating',
-  }
+  },
 );
 
 module.exports = Rating;

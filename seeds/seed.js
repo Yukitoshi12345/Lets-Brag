@@ -6,7 +6,7 @@ const bragData = require('./bragData.json');
 const commentData = require('./commentData.json');
 const ratingData = require('./ratingData.json');
 
-const seedDatabase = async() => {
+const seedDatabase = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
 
@@ -14,6 +14,7 @@ const seedDatabase = async() => {
     individualHooks: true,
     returning: true,
   });
+
   console.log('\n----- USERS SEEDED -----\n');
 
   await Brag.bulkCreate(bragData, {
