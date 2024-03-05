@@ -33,6 +33,33 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+//get all blog posts related to current user
+router.get('/dashboard', withAuth, async (req, res) => {
+  try {
+    const dbBragData = await Brag.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    },
+    );
+    const brags = dbBragData.map((brag) => brag.get({ plain: true }));
+    res.render('dashboard', {
+      brags: brags,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 // Get all brags by the category ??
 router.get('/brag?category=category', async (req, res) => {
   try {
