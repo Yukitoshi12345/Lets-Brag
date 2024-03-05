@@ -4,12 +4,14 @@ const router = require('express').Router();
 
 const userRoutes = require('./user-routes');
 const bragRoutes = require('./brag-routes');
+const postRoutes = require('./post-routes');
 const commentRoutes = require('./comment-routes');
 const ratingRoutes = require('./rating-routes');
 
 
 router.use('/users', userRoutes);
 router.use('/brags', bragRoutes);
+router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
 router.use('/ratings', ratingRoutes);
 
