@@ -1,0 +1,11 @@
+<form class=" opacity-95 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-10 w-full">
+    <label class="block text-blue-300 py-2 font-bold mb-2" for="comment">
+        Type your comment
+    </label>
+    <textarea class=" textarea textarea-bordered bg-neutral textarea-lg w-full  peer shadow appearance-none p-3 placeholder-shown:text-white  focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+        id="comment"  placeholder="comment..." required ></textarea>
+    <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm ">
+        Please provide a comment.
+    </p>
+    <button class="btn btn-accent text-accent-content commentbtn"  type="button" id="post" disabled data-id="{{id}}"> Post comment </button>
+</form>
