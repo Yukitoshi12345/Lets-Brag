@@ -30,6 +30,7 @@ $(window).ready(() => {
     // event.preventDefault();
     window.location.replace('/');
   };
+
   //handles "continue" click event
   //data validation is not done here
   //if user has access to this button,
@@ -89,7 +90,7 @@ $(window).ready(() => {
           //when user pressed login from home page
           //simply redirect the user back to home page
           window.location.replace('/');
-        }else {//check if to load post detail page
+        } else {//check if to load post detail page
           window.location.replace(`/api/posts/${page}`);
         }
         localStorage.clear();
@@ -121,9 +122,7 @@ $(window).ready(() => {
           //when user pressed login from home page
           //simply redirect the user back to home page
           window.location.replace('/');
-        }
-        //check if to load post detail page
-        else {
+        }else {//check if to load post detail page
           window.location.replace(`/api/posts/${page}`);
         }
         localStorage.clear();
@@ -181,6 +180,7 @@ $(window).ready(() => {
       }
     }
   };
+
   continueBtn.on('click', continueHandler);
   cancelBtn.on('click', cancelHandler);
   signInBtn.on('click', signInHandler);
