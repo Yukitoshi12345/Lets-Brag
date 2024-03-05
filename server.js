@@ -6,6 +6,9 @@ const routes = require('./controllers');
 const path = require('node:path');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
+const multer = require("multer");
+const path = require("path");
+const exphbs = require('express-handlebars');
 
 // Create an Express application instance
 const app = express();
@@ -13,8 +16,28 @@ const app = express();
 const PORT = process.env.PORT || 3001; // Use PORT from environment variable or default to 3001
 const hbs = exphbs.create({helpers});
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+      cb(null, "images")
+  },
+  filename: (req, file, cb) => {
+      cb(null, Date.now() + path.extname(file.originalname)) // change the name of the file from its original name to its posted date and extended name
+      console.log(file)
+  }
+})
+
+const upload = multer({storage: storage})
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+app.get("/upload", (req, res) => {
+    res.render("layouts/upload.handlebars");
+});
+
+app.post("/upload", upload.single("image"), (req, res) => {
+    res.send("successfully uploaded the image.");
+});
 
 // Middleware to parse incoming request bodies in JSON format
 app.use(express.json());
