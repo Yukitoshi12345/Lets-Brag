@@ -1,0 +1,30 @@
+<article class=" bg-neutral shadow-xl hover:opacity-90 px-6 py-3">
+    <figure class="flex justify-center"><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+            alt="Shoes" />
+    </figure>
+    <div>
+        <div class="flex justify-start gap-3 my-4">
+            <h2 class=" text-accent">{{ title }}</h2>
+            {{>post-info}}
+        </div>
+
+        <div class="my-4 prose  md:prose-lg lg:prose-xl  min-w-full">
+            {{{ content }}}
+        </div>
+        <div class="my-8 shadow-sm p-4">
+            <h2 class=" text-accent space-y-4 ">Comments</h2>
+            {{#if comments}}
+            {{#each comments as |comment|}}
+            {{>post-detail--comment-card}}
+            {{/each}}
+            {{else}}
+            <h2>There are no comments for this post yet!</h2>
+            {{/if}}
+
+        </div>
+        <div class=" shadow-sm ">
+            {{>comment-form}}
+        </div>
+    </div>
+</article>
+<script src= "/scripts/comment.js" type="application/javascript"></script>
