@@ -43,11 +43,17 @@ router.get('/brag?category=category', async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['filename', 'description'],
+          attributes: ['content'],
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
+          ],
         },
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -72,18 +78,17 @@ router.get('/brag/:id', withAuth, async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: [
-            // 'id',
-            'title',
-            'description',
-            // 'category_name',
-            // '',
-            // '',
+          attributes: ['content'],
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
           ],
         },
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
