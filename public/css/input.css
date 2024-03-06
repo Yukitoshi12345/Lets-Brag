@@ -1,93 +1,158 @@
+/* Import base styles from Tailwind CSS */
 @tailwind base;
-@tailwind components;
+
+/* Import utility classes from Tailwind CSS */
 @tailwind utilities;
 
+/* Import custom components from Tailwind CSS */
+@tailwind components;
+
+/* Set body styles */
 body {
-  width: 98%;
-  margin-inline: auto;
+  width: 98%; /* Set body width to 98% */
+  margin-inline: auto; /* Center the body content horizontally */
 }
 
+/* Sliding animation element styles */
 .sliding-anim::before {
+  /* Add content as an empty pseudo-element */
   content: '';
+  /* Position the element absolutely */
   position: absolute;
+  /* Set top and left positions */
   top: 2px;
   left: 2px;
+  /* Set element width to 50% */
   width: 50%;
+  /* Set background color with transparency */
   background-color: rgba(255, 255, 255, 0.05);
 }
+
+/* Styles for the first child span element */
 .sliding-anim span:nth-child(1) {
+  /* Position the element absolutely */
   position: absolute;
+  /* Set top and left positions */
   top: 0;
   left: 0;
+  /* Set width and height of the element */
   width: 100%;
   height: 2px;
+  /* Apply linear gradient background */
   background: linear-gradient(to right, #00cfbd, #00100d);
+  /* Animate the element with infinite linear animation */
   animation: anim1 2s infinite linear;
 }
+
+/* Keyframes for the first child span animation */
 @keyframes anim1 {
+  /* Define animation behavior at 0% */
   0% {
     transform: translateX(-100%);
   }
+  /* Define animation behavior at 100% */
   100% {
     transform: translateX(100%);
   }
 }
+
+/* Styles for the second child span element */
 .sliding-anim span:nth-child(2) {
+  /* Position the element absolutely */
   position: absolute;
+  /* Set top and right positions */
   top: 0;
   right: 0;
+  /* Set width and height of the element */
   width: 2px;
   height: 100%;
+  /* Apply linear gradient background */
   background: linear-gradient(to bottom, #00cfbd, #00100d);
+  /* Animate the element with infinite linear animation */
   animation: anim2 2s 1s infinite linear;
 }
+
+/* Keyframes for the second child span animation */
 @keyframes anim2 {
+  /* Define animation behavior at 0% */
   0% {
     transform: translateY(-100%);
   }
+  /* Define animation behavior at 100% */
   100% {
     transform: translateY(100%);
   }
 }
+
+/* Styles for the third child span element */
 .sliding-anim span:nth-child(3) {
+  /* Position the element absolutely */
   position: absolute;
+  /* Set bottom and right positions */
   bottom: 0;
   right: 0;
+  /* Set width and height of the element */
   width: 100%;
   height: 2px;
+  /* Apply linear gradient background */
   background: linear-gradient(to left, #00cfbd, #00100d);
+  /* Animate the element with infinite linear animation */
   animation: anim3 2s infinite linear;
 }
+
+/* Keyframes for the third child span animation */
 @keyframes anim3 {
+  /* Define animation behavior at 0% */
   0% {
     transform: translateX(100%);
   }
+  /* Define animation behavior at 100% */
   100% {
     transform: translateX(-100%);
   }
 }
+
+/* Styles for the fourth child span element */
 .sliding-anim span:nth-child(4) {
+  /* Position the element absolutely */
   position: absolute;
+  /* Set bottom and left positions */
   bottom: 0;
   left: 0;
+  /* Set width and height of the element */
   width: 2px;
   height: 100%;
+  /* Apply linear gradient background */
   background: linear-gradient(to top, #00cfbd, #00100d);
+  /* Animate the element with infinite linear animation, starting after 1s delay */
   animation: anim4 2s 1s infinite linear;
 }
+
+/* Keyframes for the fourth child span animation */
 @keyframes anim4 {
+  /* Define animation behavior at 0% */
   0% {
-    transform: translateY(100%);
+    transform: translateY(
+      100%
+    ); /* Start by moving the element upwards by 100% */
   }
+  /* Define animation behavior at 100% */
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-100%); /* Move the element downwards by 100% */
   }
 }
+
+/* Styles on hover for the .sliding-anim element */
 .sliding-anim:hover {
+  /* Set background color on hover */
   background: #eeeb18;
+  /* Add box shadow on hover */
   box-shadow: 0 1.4rem 3rem #eeeb18;
+  /* Set text color to black on hover */
   color: black;
 }
+/* Styles applied to child spans on hover of the parent */
 .sliding-anim:hover span {
+  /* Set background color of child spans to match parent on hover */
   background: #eeeb18;
 }
