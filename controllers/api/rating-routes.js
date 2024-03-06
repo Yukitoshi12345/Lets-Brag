@@ -11,7 +11,7 @@ router.post('/', withAuth, async (req, res) => {
         brag_id: req.body.brag_id,
       },
       defaults: {
-        rating: req.body.rating
+        rating: req.body.rating,
       },
     });
 
@@ -20,14 +20,14 @@ router.post('/', withAuth, async (req, res) => {
     } else {
       const dbUpdatedRating = await Rating.update(
         {
-          rating: req.body.rating
+          rating: req.body.rating,
         },
         {
           where: {
             rater_id: req.session.userId,
             brag_id: req.body.brag_id,
-          }
-        }
+          },
+        },
       );
       res.status(200).json(dbUpdatedRating);
     }

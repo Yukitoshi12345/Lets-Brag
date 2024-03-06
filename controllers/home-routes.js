@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
       brags,
       pageTitle: 'Home',
       loggedIn: req.session.loggedIn,
-      loggedInUser: req.session.user
+      loggedInUser: req.session.user,
     });
   } catch (error) {
     console.log(error);
@@ -33,32 +33,31 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 // Use withAuth middleware to prevent access to route
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
-      if(!req.session.loggedIn){
-          res.redirect("/login");
-          return;
-      }
+    if (!req.session.loggedIn) {
+      res.redirect('/login');
+      return;
+    }
     // Find the logged in user based on the session ID
-      const dbUserData = await User.findByPk(req.session.userId, {
-          attributes: { exclude: ["password"] },
-          include: [{ model: Brag }],
-      });
+    const dbUserData = await User.findByPk(req.session.userId, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Brag }],
+    });
 
     const user = dbUserData.get({ plain: true });
 
-      res.render("dashboard", {
-          ...user,
-          // user,
-          loggedIn: true,
-          pageTitle: "Dashboard",
-          loggedInUser: req.session.user
-      });
+    res.render('dashboard', {
+      ...user,
+      // user,
+      loggedIn: true,
+      pageTitle: 'Dashboard',
+      loggedInUser: req.session.user,
+    });
   } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
+    console.log(error);
+    res.status(500).json(error);
   }
 });
 
