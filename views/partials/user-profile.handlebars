@@ -1,0 +1,15 @@
+<div class="hero hover:opacity-70 rounded-md">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                class="max-w-16 rounded-lg shadow-2xl" />
+            <div>
+                <h2 class=" font-bold text-accent">Welcome, {{loggedInUser}}!</h2>
+                {{#if email}}
+
+                {{email}}
+                {{else}}
+                    {{user.email}}
+                {{/if}}
+            </div>
+        </div>
+</div>

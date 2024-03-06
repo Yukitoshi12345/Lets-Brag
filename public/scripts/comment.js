@@ -2,7 +2,7 @@ $(window).ready(() => {
   const postBtn = $('#post');
   const commentTxtArea = $('#comment');
 
-  /*    
+  /*
     const url = window.location.toString();
     const postId= url.charAt(url.length-1);
     */
@@ -14,7 +14,7 @@ $(window).ready(() => {
     const comment = $.trim(commentTxtArea.val());
     const postId = $(event.target).data('id');
     try {
-      const response = await fetch(`/api/comments/`, {
+      const response = await fetch('/api/comments/', {
         method: 'POST',
         body: JSON.stringify({ content: comment, post_id: postId }),
         headers: { 'Content-Type': 'application/json' },

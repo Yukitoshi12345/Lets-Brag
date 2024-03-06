@@ -1,0 +1,17 @@
+    <div class="collapse collapse-arrow shadow-xl pb-5">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+            {{title}}
+        </div>
+        <div class="collapse-content">
+            <div>Created On: {{formatDate post_date}}</div>
+            {{#if last_update_date}}
+                Last Updated On: {{formatDate last_update_date}}
+            {{/if}}
+            <div class="line-clamp-3 my-8">{{{content}}}</div>
+            <div class="flex justify-start gap-5">
+                <button class="btn btn-warning text-accent-content update" data-id={{ id }}>Update Post</button>
+                <button class="btn btn-error text-accent-content delete" data-id={{ id }}>Delete Post</button>
+            </div>
+        </div>
+    </div>

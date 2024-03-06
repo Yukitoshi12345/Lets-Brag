@@ -1,0 +1,23 @@
+<form class=" opacity-95 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-10 w-full">
+
+
+    <label class="block text-blue-300 py-2 font-bold mb-2" for="title">
+       Type your post title
+    </label>
+   <input class="peer shadow appearance-none border rounded w-full p-3 placeholder-shown:text-white  focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out" id="title" type="text" placeholder="title of the post ..." autofocus required maxlength="150">
+    <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm ">
+        Please provide a post title.
+    </p>
+
+
+    <label class="block text-blue-300 py-2 font-bold mb-2" for="content">
+        Type your post content
+    </label>
+    <textarea class=" textarea textarea-bordered bg-neutral textarea-lg w-full  peer shadow appearance-none p-3 placeholder-shown:text-white  focus:placeholder:text-purple-500 text-purple-500 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+        id="post"  placeholder="post..." required  rows="30"></textarea>
+    <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm ">
+        Please provide a post content.
+    </p>
+    <button class="btn btn-accent text-accent-content"  type="button" id="create" disabled>Create New Post </button>
+    <button class="btn btn-accent text-accent-content "  type="button" id="cancel" >Cancel </button>
+</form>

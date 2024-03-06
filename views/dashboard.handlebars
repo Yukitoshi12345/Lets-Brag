@@ -1,0 +1,24 @@
+
+{{>user-profile}}
+<div id="post-container">
+
+    {{#if brags.length}}
+
+    <h2 class="text-accent text-xl my-10"> Your Posts</h2>
+
+    {{#each brags as |post|}}
+        {{> dashboard-post-preview-card}}
+    {{/each}}
+
+    {{else}}
+        <h2 class="text-accent text-xl my-10"> You currently don't have any articles posted!</h2>
+    {{/if}}
+</div>
+
+    
+    <div class="flex justify-center mb-14">
+        <button class="btn btn-accent text-accent-content create my-8" data-id={{ id }}>Create New Post</button>
+    </div>
+        
+
+<script src="/scripts/dashboard.js" type="application/javascript"></script>
