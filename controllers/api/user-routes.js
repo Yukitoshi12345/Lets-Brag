@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
       req.session.user = dbUserData.username;
       res
         .status(200)
-        .json({ user: dbUserData, message: 'Welcome to Tech Blog!' });
+        .json({ user: dbUserData, message: 'Welcome to Brag Blog!' });
     });
   } catch (error) {
     console.log(error);
