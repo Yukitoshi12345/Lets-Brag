@@ -106,6 +106,7 @@ router.post('/login', async (req, res) => {
 
       // Send a response with status code 200 (OK) indicating success
       res.status(200).json({ message: 'Email address is correct!' });
+      // Exit the current function (skip further processing)
       return;
     }
 
