@@ -1,15 +1,17 @@
-// Import the Express router to create a new router instance
+// Import the Express router to create a new router instance for handling API routes
 const router = require('express').Router();
 
-const userRoutes = require('./user-routes');
-const bragRoutes = require('./brag-routes');
-const commentRoutes = require('./comment-routes');
-const ratingRoutes = require('./rating-routes');
+// Import separate route modules for different functionalities
+const userRoutes = require('./user-routes'); // Routes for user-related operations
+const bragRoutes = require('./brag-routes'); // Routes for brag (post) operations
+const commentRoutes = require('./comment-routes'); // Routes for comment operations
+const ratingRoutes = require('./rating-routes'); // Routes for rating operations
 
-router.use('/users', userRoutes);
-router.use('/brags', bragRoutes);
-router.use('/comments', commentRoutes);
-router.use('/ratings', ratingRoutes);
+// Mount the imported route modules onto the main router
+router.use('/users', userRoutes); // Handle user routes under '/users' prefix
+router.use('/brags', bragRoutes); // Handle brag routes under '/brags' prefix
+router.use('/comments', commentRoutes); // Handle comment routes under '/comments' prefix
+router.use('/ratings', ratingRoutes); // Handle rating routes under '/ratings' prefix
 
 // Export the router for use in other parts of the application
 module.exports = router;
