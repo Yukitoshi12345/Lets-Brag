@@ -70,8 +70,8 @@ router.get('/:id', withAuth, async (req, res) => {
       ...post,
       // post,
       pageTitle: 'Post',
-      // loggedIn: req.session.loggedIn,
-      // loggedInUser: req.session.user,
+      loggedIn: req.session.loggedIn,
+      loggedInUser: req.session.user,
     });
   } catch (error) {
     console.log(error);
