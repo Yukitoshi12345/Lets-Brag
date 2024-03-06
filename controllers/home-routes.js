@@ -24,8 +24,8 @@ router.get('/', async (req, res) => {
     res.render('homepage', {
       brags,
       pageTitle: 'Home',
-      // loggedIn: req.session.loggedIn,
-      // loggedInUser: req.session.user,
+      loggedIn: req.session.loggedIn,
+      loggedInUser: req.session.user
     });
   } catch (error) {
     console.log(error);
