@@ -92,7 +92,7 @@ $(window).ready(() => {
           window.location.replace('/');
         } else {
           //check if to load post detail page
-          window.location.replace(`/api/posts/${page}`);
+          window.location.replace(`/api/brags/${page}`);
         }
         localStorage.clear();
       } else {
@@ -125,7 +125,7 @@ $(window).ready(() => {
           window.location.replace('/');
         } else {
           //check if to load post detail page
-          window.location.replace(`/api/posts/${page}`);
+          window.location.replace(`/api/brags/${page}`);
         }
         localStorage.clear();
       } else {

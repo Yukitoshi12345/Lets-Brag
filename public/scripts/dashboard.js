@@ -8,16 +8,20 @@ $(window).ready(() => {
     try {
       //----------------------------------delete handler
       if ($(event.target).hasClass('delete')) {
-        const response = await fetch(`/api/posts/${id}`, {
+        const response = await fetch(`/api/brags/${id}`, {
           method: 'DELETE',
         });
 
         if (response.ok) {
-          window.location.replace('/dashboard');
+          window.location.reload();
+          alert('Your post has been deleted!');
         } else {
           alert('Failed to delete post');
         }
         //---------------------------------update link handler
+        //doesn't handle update data here
+        // just fetches the existing brag post
+        // displays in next page to be edited
       } else if ($(event.target).hasClass('update')) {
         const response = await fetch(`/dashboard/${id}`, {
           method: 'GET',

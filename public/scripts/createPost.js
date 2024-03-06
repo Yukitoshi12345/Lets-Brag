@@ -2,34 +2,22 @@ $(window).ready(() => {
   const createBtn = $('#create');
   const titleInput = $('#title');
   const postTxtArea = $('#post');
+  const cancelBtn = $('#cancel');
 
   //when title input value changed
   //create button is enabled only when both title and content are not empty
-  const titleChangeHandler = (event) => {
+  const titleChangeHandler = () => {
     if ($.trim(titleInput.val()) === '' || $.trim(postTxtArea.val()) === '') {
       createBtn.attr('disabled', true);
     } else {
       createBtn.removeAttr('disabled');
-    }
-  };
-
-  //when post content value is changed
-  const postChangeHandler = (event) => {
-    if ($.trim(titleInput.val()) === '' || $.trim(postTxtArea.val()) === '') {
-      createBtn.attr('disabled', true);
-    } else {
-      createBtn.removeAttr('disabled');
-    }
-    //disabling the enter key, so users can type more paragraphs
-    if (event.key === 'Enter') {
-      createHandler();
     }
   };
 
   //when create button is pressed
-  const createHandler = async (event) => {
+  const createHandler = async () => {
     try {
-      const response = await fetch('/api/posts/', {
+      const response = await fetch('/api/brags/', {
         method: 'POST',
         body: JSON.stringify({
           title: $.trim(titleInput.val()),
@@ -49,7 +37,22 @@ $(window).ready(() => {
     }
   };
 
+  //when post content value is changed
+  const postChangeHandler = () => {
+    if ($.trim(titleInput.val()) === '' || $.trim(postTxtArea.val()) === '') {
+      createBtn.attr('disabled', true);
+    } else {
+      createBtn.removeAttr('disabled');
+    }
+  };
+
+  //when cancel button is pressed
+  const cancelHandler = () => {
+    window.location.replace('/dashboard');
+  };
+
   titleInput.on('keyup', titleChangeHandler);
   postTxtArea.on('keyup', postChangeHandler);
   createBtn.on('click', createHandler);
+  cancelBtn.on('click', cancelHandler);
 });

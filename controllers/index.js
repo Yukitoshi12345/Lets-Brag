@@ -6,12 +6,13 @@ const apiRoutes = require('./api');
 
 // Import the routes for the main application from the ./homeRoutes.js file
 const homeRoutes = require('./home-routes');
+const dashboardRoutes = require('./dashboard-routes');
 
 // Mount the API routes under the "/api" path
 router.use('/api', apiRoutes);
 
 // Mount the home routes under the root path "/"
 router.use('/', homeRoutes);
-
+router.use('/', dashboardRoutes);
 // Export the router object to be used by the main application
 module.exports = router;

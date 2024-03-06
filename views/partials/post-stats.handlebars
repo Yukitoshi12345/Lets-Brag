@@ -7,7 +7,13 @@
                 </div>
             </div>
         </div>
-        <div class="stat-value text-center">{{formatNumber avgRating}}</div>
+        <div class="stat-value text-center">
+            {{#if avgRating}}
+            {{formatNumber avgRating}}
+            {{else}}
+            0
+            {{/if}}
+        </div>
         <div class="stat-title">Average Rating</div>
         <div class="stat-desc text-accent text-lg">Total Ratings: {{ totalRating}}</div>
     </div>

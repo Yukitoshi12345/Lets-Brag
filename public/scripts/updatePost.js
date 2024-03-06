@@ -12,7 +12,7 @@ $(window).ready(() => {
   };
 
   //when text in title is changed
-  const titleChangeHandler = (event) => {
+  const titleChangeHandler = () => {
     if ($.trim(titleEl.text()) === '') {
       updateBtn.attr('disabled', true);
     } else {
@@ -20,24 +20,11 @@ $(window).ready(() => {
     }
   };
 
-  // when value in textbox for post content is changed
-  const postChangeHandler = (event) => {
-    if ($.trim(postTxtArea.val()) === '') {
-      updateBtn.attr('disabled', true);
-    } else {
-      updateBtn.removeAttr('disabled');
-    }
-    //disabling the enter key, so users can type more paragraphs
-    if (event.key === 'Enter') {
-      updateHandler();
-    }
-  };
-
   // when update button is pressed
   const updateHandler = async (event) => {
     const id = $(event.target).data('id');
     try {
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`/api/brags/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
           title: $.trim(titleEl.text()),
@@ -56,8 +43,21 @@ $(window).ready(() => {
     }
   };
 
+  // when value in textbox for post content is changed
+  const postChangeHandler = (event) => {
+    if ($.trim(postTxtArea.val()) === '') {
+      updateBtn.attr('disabled', true);
+    } else {
+      updateBtn.removeAttr('disabled');
+    }
+    //disabling the enter key, so users can type more paragraphs
+    if (event.key === 'Enter') {
+      updateHandler();
+    }
+  };
+
   //when cancel button is pressed
-  const cancelHandler = (event) => {
+  const cancelHandler = () => {
     window.location.replace('/dashboard');
   };
 
