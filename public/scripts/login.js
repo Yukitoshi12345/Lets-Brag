@@ -58,7 +58,7 @@ $(window).ready(() => {
         //if the email is new to the system,
         //show sign up options
       } else {
-        form.text('Sign Up to Brag Blog!');
+        form.text("Sign Up to Let's Brag!");
         passwordContainer.removeClass('hidden');
         usernameContainer.removeClass('hidden');
         signUpBtn.removeClass('hidden');
