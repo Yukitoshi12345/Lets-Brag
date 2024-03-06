@@ -18,5 +18,3 @@ const withAuth = (req, res, next) => {
 
 // Export the `withAuth` middleware for use in protected routes
 module.exports = withAuth;
-
-// TODO: Need to add expression-session and cookies
