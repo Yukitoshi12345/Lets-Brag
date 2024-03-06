@@ -7,7 +7,7 @@ $(window).ready(() => {
         method: 'POST',
         body: JSON.stringify({
           rating: $(event.target).val(),
-          brag_id: $(event.target).data('id')
+          brag_id: $(event.target).data('id'),
         }),
         headers: { 'Content-Type': 'application/json' },
       });
@@ -23,5 +23,4 @@ $(window).ready(() => {
   };
 
   ratingOptionEl.on('change', ratingChangeHandler);
-
 });

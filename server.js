@@ -14,7 +14,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 // Set the port for the server
 const PORT = process.env.PORT || 3001; // Use PORT from environment variable or default to 3001
-const hbs = exphbs.create({helpers});
+const hbs = exphbs.create({ helpers });
 
 // Set up sessions
 const sess = {
@@ -28,11 +28,10 @@ const sess = {
     // secure: true,
     httpOnly: true,
     sameSite: 'strict',
-    maxAge: 1000*60*60//expire in an hour of idle
-  }
+    maxAge: 1000 * 60 * 60, //expire in an hour of idle
+  },
 };
 app.use(session(sess));
-
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
