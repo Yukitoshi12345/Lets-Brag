@@ -7,9 +7,8 @@ const withAuth = require('../../utils/auth');
 
 // Route handler to get a user's data by id (protected by withAuth middleware)
 router.get('/:id', withAuth, async (req, res) => {
+  const id = req.params.id; // Extract the user id from the URL
   try {
-    const id = req.params.id; // Extract the user id from the URL
-
     // If the user isn't logged in, redirect to the login page
     if (!req.session.loggedIn) {
       res.redirect('/login');
@@ -103,8 +102,10 @@ router.post('/login', async (req, res) => {
     //when the query is about email only
     // Handle password validation
     if (!req.body.password) {
-      // Validate password only if provided in request
-      const validPassword = dbUserData.checkPassword(req.body.password);
+      // If no password is provided in the request body:
+
+      // Send a response with status code 200 (OK) indicating success
+      res.status(200).json({ message: 'Email address is correct!' });
       return;
     }
 
