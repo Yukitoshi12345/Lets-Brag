@@ -11,7 +11,7 @@ const ratingRoutes = require('./rating-routes'); // Routes for rating operations
 router.use('/users', userRoutes); // Handle user routes under '/users' prefix
 router.use('/brags', bragRoutes); // Handle brag routes under '/brags' prefix
 router.use('/comments', commentRoutes); // Handle comment routes under '/comments' prefix
-router.use('/rating', ratingRoutes); // Handle rating routes under '/ratings' prefix
+router.use('/ratings', ratingRoutes); // Handle rating routes under '/ratings' prefix
 
 // Export the router for use in other parts of the application
 module.exports = router;
