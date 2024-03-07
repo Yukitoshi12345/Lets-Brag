@@ -18,16 +18,6 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-      type: DataTypes.STRING(35),
-      allowNull: false,
-      unique: true,
-      validate: {
-        notNull: true,
-        notEmpty: true,
-        isAlphanumeric: true,
-      },
-    },
     email: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -47,6 +37,20 @@ User.init(
         is: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,32}$/i,
       },
     },
+    username: {
+      type: DataTypes.STRING(35),
+      allowNull: false,
+      unique: true,
+      validate: {
+        notNull: true,
+        notEmpty: true,
+        isAlphanumeric: true,
+      },
+    },
+    photo: {
+      type: DataTypes.STRING,
+      defaultValue: null,
+    }
   },
   {
     hooks: {
