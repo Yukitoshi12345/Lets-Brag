@@ -3,6 +3,7 @@ $(window).ready(() => {
   const commentTxtArea = $('#comment');
   const cancelBtn =$('.cancel');
 
+
   /*
     const url = window.location.toString();
     const postId= url.charAt(url.length-1);
@@ -49,6 +50,8 @@ $(window).ready(() => {
     commentTxtArea.focus();
     postBtn.attr('disabled', true);
   };
+
+
   postBtn.on('click', postHandler);
   cancelBtn.on('click', cancelHandler);
   commentTxtArea.on('keyup', textChangeHandler);

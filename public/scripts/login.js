@@ -13,6 +13,7 @@ $(window).ready(() => {
   const usernameContainer = $('.user');
   const titleEl =$("title");
 
+
   titleEl.text('Let\'s Brag | Login/SignUp|');
 
   const validateEmail = (input) => {

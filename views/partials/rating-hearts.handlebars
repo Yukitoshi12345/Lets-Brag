@@ -1,6 +1,11 @@
-<div>{{rating.rating}}</div>
+{{#if rating}}
+<div class=" ratingData hidden">{{rating.rating}}</div>
+{{else}}
+<div class=" ratingData hidden">0</div>
+{{/if}}
+
 <div class="rating rating-lg gap-1">
-  <input type="radio" name="rating-3" value="1" class="mask mask-heart bg-red-400" data-id="{{id}}" checked />
+  <input type="radio" name="rating-3" value="1" class="mask mask-heart bg-red-400" data-id="{{id}}"/>
   <input type="radio" name="rating-3" value="2" class="mask mask-heart bg-orange-400" data-id="{{id}}" />
   <input type="radio" name="rating-3" value="3" class="mask mask-heart bg-yellow-400" data-id="{{id}}"/>
   <input type="radio" name="rating-3" value="4" class="mask mask-heart bg-lime-400" data-id="{{id}}" />

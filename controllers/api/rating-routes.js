@@ -1,7 +1,7 @@
 // Import the Router object from Express to create routes
 const router = require('express').Router();
-
-// const { Brag, Comment, User, Rating } = require('../..models');
+// Import the database connection from the configuration file
+const { Brag, Comment, User, Rating } = require('../../models');
 
 // Import the withAuth middleware function for authentication
 const withAuth = require('../../utils/auth');
@@ -24,6 +24,7 @@ router.post('/', withAuth, async (req, res) => {
         rating: req.body.rating, // Set the rating value from the request
       },
     });
+    console.log(created);
 
     if (created) {
       // If a new rating was created
