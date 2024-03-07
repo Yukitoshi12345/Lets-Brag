@@ -1,6 +1,7 @@
 // Import required modules
 // TODO: Add more modules
 const express = require('express');
+const multer = require('multer');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const path = require('node:path');
@@ -15,6 +16,30 @@ const app = express();
 // Set the port for the server
 const PORT = process.env.PORT || 3001; // Use PORT from environment variable or default to 3001
 const hbs = exphbs.create({ helpers });
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/images/bragImages');
+  },
+  filename: (req, file, cb) => {
+    let referenceName = Date.now() + path.extname(file.originalname);
+    let fileObject = file;
+    cb(null, Date.now() + path.extname(file.originalname)); // change the name of the file from its original name to its posted date and extended name
+    console.log(file);
+    console.log(referenceName);
+    console.log(fileObject);
+  }
+});
+
+// The upload function and route using with Multer module
+const upload = multer({storage: storage});
+
+app.get('/upload', (req, res) => {
+  res.render('layouts/upload.handlebars');
+});
+
+app.post('/upload', upload.single('image'), (req, res) => {
+  res.render('dashboard.handlebars');
+});
 
 // Set up sessions
 const sess = {
