@@ -57,6 +57,7 @@ $(window).ready(() => {
       if (response.ok) {
         passwordContainer.removeClass('hidden');
         signInBtn.removeClass('!hidden');
+        signInBtn.attr('disabled', true);
         continueBtn.addClass('!hidden');
         //if the email is new to the system,
         //show sign up options
@@ -65,6 +66,7 @@ $(window).ready(() => {
         passwordContainer.removeClass('hidden');
         usernameContainer.removeClass('hidden');
         signUpBtn.removeClass('!hidden');
+        signUpBtn.attr('disabled', true);
         continueBtn.addClass('!hidden');
       }
     } catch (error) {
@@ -144,12 +146,12 @@ $(window).ready(() => {
   //unless it is disabled
   const emailChangeHandler = (event) => {
     if (validateEmail(emailEl.val())) {
-      continueBtn.removeClass('!hidden');
+      continueBtn.removeAttr('disabled');
       if (event.key === 'Enter') {
         continueHandler();
       }
     } else {
-      continueBtn.addClass('!hidden');
+      continueBtn.attr('disabled', true);
     }
   };
 
@@ -158,12 +160,18 @@ $(window).ready(() => {
   const passwordChangeHandler = async (event) => {
     if (signUpBtn.hasClass('!hidden')) {
       if (validatePassword(passwordEl.val())) {
-        signInBtn.removeClass('!hidden');
+        signInBtn.removeAttr('disabled');
         if (event.key === 'Enter') {
           signInHandler();
         }
       } else {
-        signInBtn.addClass('!hidden');
+        signInBtn.attr('disabled', true);
+      }
+    }else{
+      if(validateUsername(usernameEl.val()) && validatePassword(passwordEl.val())){
+          signUpBtn.removeAttr('disabled');
+      }else{
+          signUpBtn.attr('disabled', true);
       }
     }
   };
@@ -176,12 +184,12 @@ $(window).ready(() => {
         validateUsername(usernameEl.val()) &&
         validatePassword(passwordEl.val())
       ) {
-        signUpBtn.removeClass('!hidden');
+        signUpBtn.removeAttr('disabled');
         if (event.key === 'Enter') {
           signUpHandler();
         }
       } else {
-        signUpBtn.addClass('!hidden');
+        signUpBtn.attr('disabled', true);
       }
     }
   };
