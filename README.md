@@ -53,6 +53,12 @@ THEN the app opens their photo gallery, allowing them to choose an image to shar
 - Connect Session Sequelize (version 7.1.7)
 - Dotenv (version 16.4.5)
 
+## Installation Instruction
+
+- [Install nodejs and npm](https://nodejs.org/en/download)
+- [Install Insomnia](https://insomnia.rest/download)
+- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
+
 ## Usage
 
 | Steps            | Details                                                        |
@@ -129,18 +135,13 @@ THEN the app opens their photo gallery, allowing them to choose an image to shar
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Role  | Task<br> Task<br> Task<br>Task |
-| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Role  | Task                           |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Role  | Task<br> Task                  |
-| [Suyash Maharjan](https://github.com/simplesuyash)                              | Role  | Task <br> Task <br> Task       |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager/Developer  | Task<br> Task<br> Task<br>Task |
+| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Developer  | Task                           |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Developer  | Task<br> Task                  |
+| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer/Developer  | Task <br> Task <br> Task       |
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
-## Installation Instruction
-
-- [Install nodejs and npm](https://nodejs.org/en/download)
-- [Install Insomnia](https://insomnia.rest/download)
-- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
 
 ## License
 
