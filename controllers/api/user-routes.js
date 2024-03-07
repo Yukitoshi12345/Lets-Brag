@@ -18,7 +18,7 @@ router.get('/:id', withAuth, async (req, res) => {
     // Find the user with the given id, selecting only username and email fields
     const dbUserData = await User.findByPk(id, {
       attributes: {
-        include: ['username', 'email'],
+        include: ['username', 'email', 'photo'],
       },
     });
 
@@ -35,6 +35,7 @@ router.get('/:id', withAuth, async (req, res) => {
       pageTitle: 'New Post',
       loggedIn: req.session.loggedIn, // Pass login status to the template
       loggedInUser: req.session.user, // Pass logged-in username to the template
+      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error); // Log any errors
@@ -70,6 +71,7 @@ router.post('/', async (req, res) => {
       req.session.loggedIn = true;
       req.session.userId = dbUserData.id;
       req.session.user = dbUserData.username;
+      req.session.photo = dbUserData.photo;
       res
         .status(200)
         .json({ user: dbUserData, message: "Welcome to Let's Brag!" });
@@ -132,6 +134,7 @@ router.post('/login', async (req, res) => {
       req.session.userId = dbUserData.id;
       // Store the user's username in the session for easy access
       req.session.user = dbUserData.username;
+      req.session.photo = dbUserData.photo;
 
       // Send a response with status code 200 (OK) and a JSON object containing the user data and a success message
       res

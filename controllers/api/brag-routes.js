@@ -29,7 +29,7 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the author's username
-          attributes: ['username'],
+          attributes: ['username', 'photo'],
         },
         // {
         //   model: Rating, // Include associated ratings
@@ -75,7 +75,7 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the commenter's username
-          attributes: ['username'],
+          attributes: ['username', 'photo'],
         },
       ],
     });

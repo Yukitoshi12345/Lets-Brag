@@ -1,22 +1,26 @@
 [
   {
-    "username": "simplesuyash",
     "email": "suyash@mail.com",
-    "password": "@Suyash123"
+    "password": "@Suyash123",
+    "username": "simplesuyash",
+    "photo": "suyash2.jpg"
   },
   {
-    "username": "awesomeandrii",
     "email": "andrii@mail.com",
-    "password": "@Andrii123"
+    "password": "@Andrii123",
+    "username": "awesomeandrii",
+    "photo": "suyash2.jpg"
   },
   {
-    "username": "jollyjonathan",
     "email": "jonathan@mail.com",
-    "password": "@Jonathan123"
+    "password": "@Jonathan123",
+    "username": "jollyjonathan",
+    "photo": "suyash2.jpg"
   },
   {
-    "username": "youngyuki",
     "email": "yuki@mail.com",
-    "password": "@Yuki123"
+    "password": "@Yuki123",
+    "username": "youngyuki",
+    "photo": "suyash2.jpg"
   }
 ]

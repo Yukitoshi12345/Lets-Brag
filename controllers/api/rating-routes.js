@@ -1,7 +1,8 @@
 // Import the Router object from Express to create routes
 const router = require('express').Router();
 
-const { Rating } = require('../../models');
+// Import the database connection from the configuration file
+const {  Rating } = require('../../models');
 
 // Import the withAuth middleware function for authentication
 const withAuth = require('../../utils/auth');
