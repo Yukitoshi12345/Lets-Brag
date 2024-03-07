@@ -1,8 +1,9 @@
 
 <article class="hero bg-base-200 shadow-xl hover:opacity-70 rounded-md">
     <div class="hero-content flex-col lg:flex-row-reverse">
-        <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
-            class="max-w-sm rounded-lg shadow-2xl" />
+        {{!-- <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+            class="max-w-sm rounded-lg shadow-2xl" /> --}}
+            <img src="/images/{{post_photo}}" alt="post related photo" class="max-w-sm rounded-lg shadow-2xl" />
         <div>
             <h1 class=" font-bold text-accent">{{ title }}</h1>
             {{>post-info}}

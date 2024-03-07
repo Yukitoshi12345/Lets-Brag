@@ -1,23 +1,26 @@
 [
   {
+    "id": "1",
     "title": "Going to mount everest",
     "content": "Our team was on Everest to mark the anniversary of that expedition. Yet as we witnessed, the mountain has become an icon for everything that is wrong with climbing.",
     "brag_date": "2023-08-27 06:30:50",
-    "photo": "link here",
+    "post_photo": "mt-everest.png",
     "bragger_id": "1"
   },
   {
+    "id": "2",
     "title": "Going to bahamas",
     "content": "My family was on the bahamas to mark the 20th anniversary of my parent's wedding.",
     "brag_date": "2023-09-02 12:00:00",
-    "photo": "link here",
+    "post_photo": "bahamas.png",
     "bragger_id": "2"
   },
   {
+    "id": "3",
     "title": "First place in National Race",
     "content": "I got first place on my country national race.",
     "brag_date": "2024-01-19 15:50:50",
-    "photo": "link here",
+    "post_photo": "race.png",
     "bragger_id": "3"
   }
 ]

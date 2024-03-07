@@ -965,6 +965,10 @@ html {
   max-width: 4rem;
 }
 
+.max-w-screen-xl {
+  max-width: 1280px;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }

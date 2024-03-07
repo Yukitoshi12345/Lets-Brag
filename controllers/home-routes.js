@@ -30,6 +30,7 @@ router.get('/', async (req, res) => {
       pageTitle: 'Home',
       loggedIn: req.session.loggedIn, // Pass login status
       loggedInUser: req.session.user, // Pass logged-in username
+      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error); // Log any errors
@@ -62,6 +63,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       loggedIn: true, // Set explicit login status (optional)
       pageTitle: 'Dashboard',
       loggedInUser: req.session.user,
+      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error);

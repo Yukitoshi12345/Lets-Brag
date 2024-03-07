@@ -16,7 +16,7 @@ router.get('/dashboard/:id', async (req, res) => {
           // Include related user data
           model: User,
           // Select only the email attribute from the User model
-          attributes: ['email'],
+          attributes: ['email', 'profile_photo'],
         },
       ],
     });
@@ -40,6 +40,7 @@ router.get('/dashboard/:id', async (req, res) => {
       // Pass login status and username for context
       loggedIn: req.session.loggedIn,
       loggedInUser: req.session.user,
+      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error); // Log any errors

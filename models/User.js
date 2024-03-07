@@ -47,7 +47,7 @@ User.init(
         isAlphanumeric: true,
       },
     },
-    photo: {
+    profile_photo: {
       type: DataTypes.STRING,
       defaultValue: null,
     }

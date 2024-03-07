@@ -34,7 +34,7 @@ Brag.init(
       allowNull: false,
       defaultValue: dayjs().format('YYYY-MM-DD hh:mm:ss'),
     },
-    photo: {
+    post_photo: {
       type: DataTypes.STRING,
       defaultValue: null,
     },

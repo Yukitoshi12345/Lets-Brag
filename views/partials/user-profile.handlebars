@@ -1,9 +1,9 @@
 <div class="hero hover:opacity-70 rounded-md">
         <div class="hero-content flex-col lg:flex-row-reverse">
-            {{#if photo}}
-                <img src=`/images/{{photo}}` class="max-w-16 rounded-lg shadow-2xl" />
+            {{#if profile_photo}}
+                <img src="/images/{{profile_photo}}" class="max-w-16 rounded-lg shadow-2xl" />
             {{else}}
-                <img src=`/images/{{user.photo}}` class="max-w-16 rounded-lg shadow-2xl" />
+                <img src="/images/{{user.profile_photo}}" class="max-w-16 rounded-lg shadow-2xl" />
             {{/if}}
             <div>
                 <h2 class=" font-bold text-accent">Welcome, {{loggedInUser}}!</h2>

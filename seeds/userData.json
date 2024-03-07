@@ -1,26 +1,30 @@
 [
   {
+    "id": "1",
     "email": "suyash@mail.com",
     "password": "@Suyash123",
     "username": "simplesuyash",
-    "photo": "suyash2.jpg"
+    "profile_photo": "suyash2.jpg"
   },
   {
+    "id": "2",
     "email": "andrii@mail.com",
     "password": "@Andrii123",
     "username": "awesomeandrii",
-    "photo": "suyash2.jpg"
+    "profile_photo": "suyash2.jpg"
   },
   {
+    "id": "3",
     "email": "jonathan@mail.com",
     "password": "@Jonathan123",
     "username": "jollyjonathan",
-    "photo": "suyash2.jpg"
+    "profile_photo": "suyash2.jpg"
   },
   {
+    "id": "4",
     "email": "yuki@mail.com",
     "password": "@Yuki123",
     "username": "youngyuki",
-    "photo": "suyash2.jpg"
+    "profile_photo": "suyash2.jpg"
   }
 ]
