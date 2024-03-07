@@ -29,7 +29,7 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the author's username
-          attributes: ['username', 'photo'],
+          attributes: ['username', 'profile_photo'],
         },
         // {
         //   model: Rating, // Include associated ratings
@@ -75,7 +75,7 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the commenter's username
-          attributes: ['username', 'photo'],
+          attributes: ['username', 'profile_photo'],
         },
       ],
     });
@@ -103,6 +103,7 @@ router.get('/:id', withAuth, async (req, res) => {
       pageTitle: 'Post',
       loggedIn: req.session.loggedIn,
       loggedInUser: req.session.user, // Include user information for context
+      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error); // Log any errors
