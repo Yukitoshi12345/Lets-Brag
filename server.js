@@ -1,45 +1,29 @@
 // Import required modules
-// TODO: Add more modules
-const express = require('express');
-const multer = require('multer');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const path = require('node:path');
-const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers');
-// Import express-session
-const session = require('express-session');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// ----------------------------------------------------------------
+// Core modules for application setup
+const express = require('express'); // Web application framework
+const exphbs = require('express-handlebars'); // Handlebars templating engine
+const path = require('node:path'); // File path handling
+const session = require('express-session'); // Session management
+const SequelizeStore = require('connect-session-sequelize')(session.Store); // Session store using Sequelize
+// ----------------------------------------------------------------
+
+// Application-specific modules
+const routes = require('./controllers'); // Import routes configuration
+const sequelize = require('./config/connection'); // Database connection setup
+const helpers = require('./utils/helpers'); // Custom helper functions
+
+// ----------------------------------------------------------------
 
 // Create an Express application instance
 const app = express();
 // Set the port for the server
 const PORT = process.env.PORT || 3001; // Use PORT from environment variable or default to 3001
+
+// Configure Handlebars templating engine
 const hbs = exphbs.create({ helpers });
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'public/images/bragImages');
-  },
-  filename: (req, file, cb) => {
-    let referenceName = Date.now() + path.extname(file.originalname);
-    let fileObject = file;
-    cb(null, Date.now() + path.extname(file.originalname)); // change the name of the file from its original name to its posted date and extended name
-    console.log(file);
-    console.log(referenceName);
-    console.log(fileObject);
-  }
-});
 
-// The upload function and route using with Multer module
-const upload = multer({storage: storage});
-
-app.get('/upload', (req, res) => {
-  res.render('layouts/upload.handlebars');
-});
-
-app.post('/upload', upload.single('image'), (req, res) => {
-  res.render('dashboard.handlebars');
-});
+// ----------------------------------------------------------------
 
 // Set up sessions
 const sess = {
@@ -58,19 +42,35 @@ const sess = {
 };
 app.use(session(sess));
 
+// Configure Handlebars as the view engine
+// ----------------------------------------------------------------
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
+
+// ----------------------------------------------------------------
+
+// Middleware to handle incoming data
+// ----------------------------------------------------------------
 
 // Middleware to parse incoming request bodies in JSON format
 app.use(express.json());
 // Middleware to parse URL-encoded data with extended options
+// Parse URL-encoded data with extended options
 app.use(express.urlencoded({ extended: true }));
+
+// ----------------------------------------------------------------
+
+// Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, '/public')));
+
+// ----------------------------------------------------------------
 
 // turn on routes
 app.use(routes);
 
 // turn on connection to db and server
+// Establish database connection and start the server
+// ----------------------------------------------------------------
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
