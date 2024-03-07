@@ -24,6 +24,7 @@ router.post('/', withAuth, async (req, res) => {
         rating: req.body.rating, // Set the rating value from the request
       },
     });
+    console.log(created);
 
     if (created) {
       // If a new rating was created

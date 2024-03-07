@@ -1,12 +1,14 @@
 $(window).ready(() => {
-  const ratingOptionEl = $('input[type=radio][name=rating-3]');
+  const ratingStarEls = $('input[type="radio"][name="rating-3"]');
+  const ratingEl=$('.ratingData');
+ 
 
   const ratingChangeHandler = async (event) => {
     try {
-      const response = await fetch('/api/rating', {
+      const response = await fetch('/api/ratings/', {
         method: 'POST',
         body: JSON.stringify({
-          rating: $(event.target).val(),
+          rating:  $(event.target).prop('value'),
           brag_id: $(event.target).data('id'),
         }),
         headers: { 'Content-Type': 'application/json' },
@@ -22,5 +24,16 @@ $(window).ready(() => {
     }
   };
 
-  ratingOptionEl.on('change', ratingChangeHandler);
+  const ratingLoadingHandler = () =>{
+    const rating = ratingEl.text();
+    // alert(rating);
+    ratingStarEls.each((i, ratingStar)=>{
+      if(ratingStar.value === rating){
+        $(ratingStar).prop('checked', true);
+      }
+    });
+  };
+
+  $(window).on('load', ratingLoadingHandler);
+  ratingStarEls.on('change', ratingChangeHandler);
 });

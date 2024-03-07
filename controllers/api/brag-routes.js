@@ -31,9 +31,9 @@ router.get('/:id', withAuth, async (req, res) => {
           model: User, // Include the author's username
           attributes: ['username'],
         },
-        {
-          model: Rating, // Include associated ratings
-        },
+        // {
+        //   model: Rating, // Include associated ratings
+        // },
       ],
       attributes: {
         include: [
@@ -59,6 +59,14 @@ router.get('/:id', withAuth, async (req, res) => {
       return;
     }
 
+    // Retrieve rating for the post
+    const dbRatingData = await Rating.findOne({
+      where: {
+        brag_id: id, // Filter comments for the specific post
+        rater_id: req.session.userId
+      }
+    });
+
     // Retrieve comments for the post
     const dbCommentData = await Comment.findAll({
       where: {
@@ -74,11 +82,19 @@ router.get('/:id', withAuth, async (req, res) => {
 
     // Get plain objects for rendering
     const post = dbPostData.get({ plain: true });
+    let rating;
+    if(dbRatingData){
+      rating = dbRatingData.get({ plain: true });
+    }else{
+      rating = null;
+    }
+    
     const comments = dbCommentData.map((comment) =>
       comment.get({ plain: true }),
     );
 
     // Add comments to the post object
+    post.rating= rating;
     post.comments = comments;
     res.render('post-detail', {
       //using spread operator
