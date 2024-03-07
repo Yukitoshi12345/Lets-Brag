@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars'); // Handlebars templating engine
 const path = require('node:path'); // File path handling
 const session = require('express-session'); // Session management
 const SequelizeStore = require('connect-session-sequelize')(session.Store); // Session store using Sequelize
+const cors = require('cors'); // CORS middleware
 // ----------------------------------------------------------------
 
 // Application-specific modules
@@ -17,6 +18,7 @@ const helpers = require('./utils/helpers'); // Custom helper functions
 
 // Create an Express application instance
 const app = express();
+
 // Set the port for the server
 const PORT = process.env.PORT || 3001; // Use PORT from environment variable or default to 3001
 
@@ -54,6 +56,11 @@ app.set('view engine', 'handlebars');
 
 // Middleware to parse incoming request bodies in JSON format
 app.use(express.json());
+
+// This line registers middleware with the Express.js application (app)
+// that enables Cross-Origin Resource Sharing (CORS).
+app.use(cors());
+
 // Middleware to parse URL-encoded data with extended options
 // Parse URL-encoded data with extended options
 app.use(express.urlencoded({ extended: true }));
