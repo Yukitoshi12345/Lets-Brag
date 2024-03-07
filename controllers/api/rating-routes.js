@@ -1,5 +1,6 @@
 // Import the Router object from Express to create routes
 const router = require('express').Router();
+
 // Import the database connection from the configuration file
 const {  Rating } = require('../../models');
 
