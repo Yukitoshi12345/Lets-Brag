@@ -11,6 +11,9 @@ $(window).ready(() => {
 
   const passwordContainer = $('.pw');
   const usernameContainer = $('.user');
+  const titleEl =$("title");
+
+  titleEl.text('Let\'s Brag | Login/SignUp|');
 
   const validateEmail = (input) => {
     const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -53,16 +56,16 @@ $(window).ready(() => {
       //show sign in options
       if (response.ok) {
         passwordContainer.removeClass('hidden');
-        signInBtn.removeClass('hidden');
-        continueBtn.addClass('hidden');
+        signInBtn.removeClass('!hidden');
+        continueBtn.addClass('!hidden');
         //if the email is new to the system,
         //show sign up options
       } else {
         form.text("Sign Up to Let's Brag!");
         passwordContainer.removeClass('hidden');
         usernameContainer.removeClass('hidden');
-        signUpBtn.removeClass('hidden');
-        continueBtn.addClass('hidden');
+        signUpBtn.removeClass('!hidden');
+        continueBtn.addClass('!hidden');
       }
     } catch (error) {
       console.log(error);
@@ -141,26 +144,26 @@ $(window).ready(() => {
   //unless it is disabled
   const emailChangeHandler = (event) => {
     if (validateEmail(emailEl.val())) {
-      continueBtn.removeAttr('disabled');
+      continueBtn.removeClass('!hidden');
       if (event.key === 'Enter') {
         continueHandler();
       }
     } else {
-      continueBtn.attr('disabled', true);
+      continueBtn.addClass('!hidden');
     }
   };
 
   //when email and password are valid
   //enable sign in button
   const passwordChangeHandler = async (event) => {
-    if (signUpBtn.hasClass('hidden')) {
+    if (signUpBtn.hasClass('!hidden')) {
       if (validatePassword(passwordEl.val())) {
-        signInBtn.removeAttr('disabled');
+        signInBtn.removeClass('!hidden');
         if (event.key === 'Enter') {
           signInHandler();
         }
       } else {
-        signInBtn.attr('disabled', true);
+        signInBtn.addClass('!hidden');
       }
     }
   };
@@ -168,17 +171,17 @@ $(window).ready(() => {
   //when email, password and username is valid
   //enable sign up button
   const usernameChangeHandler = (event) => {
-    if (signInBtn.hasClass('hidden')) {
+    if (signInBtn.hasClass('!hidden')) {
       if (
         validateUsername(usernameEl.val()) &&
         validatePassword(passwordEl.val())
       ) {
-        signUpBtn.removeAttr('disabled');
+        signUpBtn.removeClass('!hidden');
         if (event.key === 'Enter') {
           signUpHandler();
         }
       } else {
-        signUpBtn.attr('disabled', true);
+        signUpBtn.addClass('!hidden');
       }
     }
   };
