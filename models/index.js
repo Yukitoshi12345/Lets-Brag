@@ -1,53 +1,58 @@
+// Import model definitions
 const Brag = require('./Brag');
 const Comment = require('./Comment');
 const Rating = require('./Rating');
 const User = require('./User');
 
-//defining Model associations
+// Define Model Associations (Relationships)
 
-//Brag<>Comment
+// Brag - Comment Association (One-to-Many)
 Brag.hasMany(Comment, {
-  foreignKey: 'brag_id',
-  onDelete: 'CASCADE',
+  foreignKey: 'brag_id', // Foreign key in the Comment table referencing the Brag model
+  onDelete: 'CASCADE', // Delete associated comments when a brag is deleted
 });
 Comment.belongsTo(Brag, {
-  foreignKey: 'brag_id',
+  foreignKey: 'brag_id', // Foreign key in the Comment table referencing the Brag model
 });
 
-//Brag<>User
+// Brag - User Association (One-to-Many)
 User.hasMany(Brag, {
-  foreignKey: 'bragger_id',
-  onDelete: 'CASCADE',
+  foreignKey: 'bragger_id', // Foreign key in the Brag table referencing the User model
+  onDelete: 'CASCADE', // Delete associated brags when a user is deleted
 });
+
 Brag.belongsTo(User, {
-  foreignKey: 'bragger_id',
+  foreignKey: 'bragger_id', // Foreign key in the Brag table referencing the User model
 });
 
-//Brag<>Rating
+// Brag - Rating Association (One-to-One)
 Brag.hasOne(Rating, {
-  foreignKey: 'brag_id',
-  onDelete: 'CASCADE',
+  foreignKey: 'brag_id', // Foreign key in the Rating table referencing the Brag model
+  onDelete: 'CASCADE', // Delete associated rating when a brag is deleted
 });
+
 Rating.belongsTo(Brag, {
-  foreignKey: 'brag_id',
+  foreignKey: 'brag_id', // Foreign key in the Rating table referencing the Brag model
 });
 
-//User<>Rating
+// User - Rating Association (One-to-One)
 User.hasOne(Rating, {
-  foreignKey: 'rater_id',
-  onDelete: 'CASCADE',
-});
-Rating.belongsTo(User, {
-  foreignKey: 'rater_id',
+  foreignKey: 'rater_id', // Foreign key in the Rating table referencing the User model
+  onDelete: 'CASCADE', // Delete associated rating when a user is deleted
 });
 
-//User<>Comment
+Rating.belongsTo(User, {
+  foreignKey: 'rater_id', // Foreign key in the Rating table referencing the User model
+});
+
+// User - Comment Association (One-to-Many)
 User.hasMany(Comment, {
-  foreignKey: 'commenter_id',
-  onDelete: 'CASCADE',
+  foreignKey: 'commenter_id', // Foreign key in the Comment table referencing the User model
+  onDelete: 'CASCADE', // Delete associated comments when a user is deleted
 });
 Comment.belongsTo(User, {
-  foreignKey: 'commenter_id',
+  foreignKey: 'commenter_id', // Foreign key in the Comment table referencing the User model
 });
 
+// Export all models for use in other parts of the application
 module.exports = { Brag, Comment, Rating, User };
