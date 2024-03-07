@@ -135,10 +135,10 @@ THEN the app opens their photo gallery, allowing them to choose an image to shar
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager/Developer  | Task<br> Task<br> Task<br>Task |
-| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Developer  | Task                           |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Developer  | Task<br> Task                  |
-| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer/Developer  | Task <br> Task <br> Task       |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | Task<br> Task<br> Task<br>Task |
+| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | Task                           |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | Task<br> Task                  |
+| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | Task <br> Task <br> Task       |
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
