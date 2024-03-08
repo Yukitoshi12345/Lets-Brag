@@ -110,7 +110,7 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 
 ## Test Instruction
 
-To use this project,
+To use this project:
 
 - Get a copy of this repo to your local machine.
 - Install the Node Module
@@ -130,6 +130,27 @@ npm run start
 
 ## Overview
 
+#### Features:
+
+- 
+- 
+
+#### Motivation For Development:
+
+
+
+#### Challenges:
+
+- Merge Conflict
+- Time Limit
+
+#### Successes:
+
+-Learnt multer
+- Got a full grasp understanding of MVC
+- Overcoming slow start
+
+
 ## Contribution/Roles
 
 | Contributors                                                 | Roles | Task                           |
@@ -138,7 +159,6 @@ npm run start
 | [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
 | [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
 | [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
-
 
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
