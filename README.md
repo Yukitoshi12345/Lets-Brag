@@ -28,33 +28,42 @@ So that I can receive positive feedback, inspire others, and feel a sense of bel
 ## Acceptance Criteria
 
 ```md
-GIVEN the user has installed the app,
-WHEN the user opens the app,
-THEN the user will be presented with the main page of the app showcasing other users post about their achivements and travels with a picture on the top right.
-WHEN the user click the login option,
-THEN it will show two options, one for dashboard and one for sign up.
-WHEN the user click the option of login,
-THEN it will take the user to the app's login page where they could create an account for the app using their email.
-WHEN the user finished signing up,
-THEN the user will be brought into the app's dashboard page where they could post their own Brags by clicking the create post button that is available on the page.
-WHEN they click the create post button on the dashboard,
-THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements which can be typed as a title and post description with text boxes that is provided in the page.
-WHEN the user tries to put a post title and description on their post,
-THEN the title and/or the description text box expands and becomes fully editable, depending on which one they hover over or click, allowing them to type their post tile and/or description.
-WHEN the user clicks the dashboard option from the main page after logging in,
-THEN the user will be brought to the dashboard page.
-WHEN the user is in the dashboard page after posting something,
-THEN the user will be able to view their own post, and also update and delete the post of their choosing.
-WHEN the user click one of the post presented in the main page,
-THEN the user will be able to see more details regarding the post itself such as poster's name, post description, post ratings thats represented with starts, and a comments box.
-WHEN the user click the stars icon for the ratings within a post,
-THEN the user can give ratings for the post itself ranging from 1 star to 5 stars.
-WHEN the user tries to comment on the post,
-THEN comment text box expands and becomes fully editable, allowing them to type their comment.
-THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements.
+**Initial Visit**
+GIVEN I visit the Let's Brag website for the first time,
+WHEN I land on the homepage,
+THEN I am greeted by the main page showcasing other users' achievements and travels, with a picture prominently displayed on the top right.
+
+**Login and Sign up**
+WHEN I click the login option,
+THEN it will show two options: one for dashboard and one for sign up.
+WHEN I click the option of login,
+THEN I am taken to the login page where I can create an account using my email.
+WHEN I finish signing up,
+THEN I am brought to the dashboard page.
+
+**Creating Brags**
+When I click the create post button on the dashboard,
+THEN the Let's Brag website opens my photo gallery, allowing me to choose an image to share alongside my achievements.
+THEN I can type my achievements as a title and post description with the provided text boxes on the page.
+WHEN I try to put a post title and description on my post,
+THEN the title and/or the description text box expands and becomes fully editable, depending on which one I hover over or click, allowing me to type my post title and/or description.
+
+**Dashboard and Post Management**
+WHEN I click the dashboard option from the main page after logging in,
+THEN I am brought to the dashboard page.
+WHEN I am in the dashboard page after posting something,
+THEN I can view my own post, and also update and delete the post of my choosing.
+
+**Viewing and Interacting with Posts**
+When I click one of the posts presented in the main page,
+Then I can see more details regarding the post itself, such as the poster's name, post description, post ratings represented by stars, and a comments box.
+When I click the heart icon for the ratings within a post,
+Then I can give a rating for the post itself, ranging from 1 heart to 5 hearts.
+When I try to comment on the post,
+Then the comment text box expands and becomes fully editable, allowing me to type my comment.
 ```
 
-## Technologies Used
+## Technologies Used 
 - CSS
 - JavaScript
 - Node.js
