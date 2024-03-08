@@ -2,7 +2,7 @@
 
 <h1 align ="center">Let's Brag!</h1>
 
-Tired of keeping your achievements under wraps? Introducing Let’s Brag, the social media platform dedicated to celebrating your wins, big and small. Share your accomplishments, travel adventures, and anything else you are proud of with a community that encourages self-expression and positive vibes. Earn “brag points” for your posts, with the top 5 users taking centre stage on the front page to inspire others and soak up some well-deserved recognition. Let’s Brag: where your achievements shine bright.
+Tired of keeping your achievements under wraps? Introducing Let’s Brag, the social media platform dedicated to celebrating your wins, big and small. Share your accomplishments, travel adventures, and anything else you are proud of with a community that encourages self-expression and positive vibes. Earn “brag points” for your posts, with the top 3 users taking centre stage on the front page to inspire others and soak up some well-deserved recognition. Let’s Brag: where your achievements shine bright.
 
 
 ## Table of Contents
@@ -12,7 +12,7 @@ Tired of keeping your achievements under wraps? Introducing Let’s Brag, the so
 - [Usage](#usage)
 - [Test Instruction](#test-instruction)
 - [Screenshots](#screenshots)
-- [Output](#output)
+- [Overview](#overview)
 - [Contribution/Roles](#contributionroles)
 - [Installation Instruction](#installation-instruction)
 - [License](#license)
@@ -61,6 +61,10 @@ When I click the heart icon for the ratings within a post,
 Then I can give a rating for the post itself, ranging from 1 heart to 5 hearts.
 When I try to comment on the post,
 Then the comment text box expands and becomes fully editable, allowing me to type my comment.
+
+**Bonus Feature: The Brag Spotlight**
+Keep an eye out for a dedicated section on the homepage.
+Here, Let's Brag recognises the top 3 users with the most "brag points" earned through post ratings and interactions.
 ```
 
 ## Technologies Used 
@@ -68,13 +72,25 @@ Then the comment text box expands and becomes fully editable, allowing me to typ
 - JavaScript
 - Node.js
 - Bcrypt (version 5.1.1)
+- CORS (version 2.8.5)
+- Dayjs (version 1.11.10)
 - Express.js (version 4.18.2)
 - Express-Handlebars (version 7.1.2)
 - Express-Session (version 1.18.0)
+- Multer (version 1.4.5-lts.1)
 - MySQL2 (version 3.9.1)
 - Sequelize (version 6.37.1)
 - Connect Session Sequelize (version 7.1.7)
 - Dotenv (version 16.4.5)
+
+## Development Dependencies Used
+- Tailwindcss (version 3.4.1)
+- @Tailwindcss/typography (version 0.5.19)
+- Daisyui (version 4.7.2)
+- Eslint (version 8.57.0)
+- Eslint Config Prettier (version 9.1.0)
+- Prettier (version 3.2.5)
+- Nodemon (version 3.1.0)
 
 ## Installation Instruction
 
@@ -92,76 +108,34 @@ Then the comment text box expands and becomes fully editable, allowing me to typ
 
 ## Test Instruction
 
-#### Command to install packages and any packages it depends on:
+To use this project,
 
-`npm install`
-
-#### Command to install Express dependencies:
-
-`npm i express`
-
-#### Command to install Express-Handlebars dependencies:
-
-`npm i express-handlebars`
-
-#### Command to install Express-Session dependencies:
-
-`npm i express-session`
-
-#### Command to install MySQL2 dependencies:
-
-`npm i mysql2`
-
-#### Command to install Bcrypt dependencies:
-
-`npm i bcrypt`
-
-#### Command to install Sequelize dependencies:
-
-`npm i sequelize`
-
-#### Command to install Connect-Session-Sequelize dependencies:
-
-`npm i connect-session-sequelize`
-
-#### Command to install Dotenv dependencies:
-
-`npm i dotenv`
-
-#### Command to install Eslint Dev dependencies:
-
-`npm i eslint --save-dev`
-
-#### Command to install Eslint-config-prettier Dev dependencies:
-
-`npm i eslint-config-prettier --save-dev`
-
-#### Command to install Prettier Dev dependencies:
-
-`npm i prettier --save-dev`
-
-#### Run seed:
-
-`npm run seed`
-
-#### Start running:
-
-`npm start`
+- Get a copy of this repo to your local machine.
+- Install the Node Module
+```
+npm install
+```
+- Change the .env copy file to .env and insert your database password
+- And, start the `Express Server` by typing in the following:
+```
+npm run start
+```
+- Go to this link: http://localhost:3001
 
 ## Screenshots
 
 ![]()
 
-## Output
+## Overview
 
 ## Contribution/Roles
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | Task<br> Task<br> Task<br>Task |
-| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | Task                           |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | Task<br> Task                  |
-| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | Task <br> Task <br> Task       |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Prepared Presentation Slideshow  |
+| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
+| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
