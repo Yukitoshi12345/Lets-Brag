@@ -2,7 +2,9 @@
 
 <h1 align ="center">Let's Brag!</h1>
 
-Tired of keeping your achievements under wraps? Introducing Let’s Brag, the social media platform dedicated to celebrating your wins, big and small. Share your accomplishments, travel adventures, and anything else you are proud of with a community that encourages self-expression and positive vibes. Earn “brag points” for your posts, with the top 3 users taking centre stage on the front page to inspire others and soak up some well-deserved recognition. Let’s Brag: where your achievements shine bright.
+Tired of keeping your achievements under wraps and feeling like your victories go unnoticed? Let's Brag is here to change that! It's the social media platform designed specifically for celebrating your wins, big and small. Whether you aced that presentation at work, finally mastered that yoga pose, or embarked on the dream vacation you've been saving for, Let's Brag is your space to share it all with a supportive community that thrives on positive vibes and self-expression.
+
+But Let's Brag isn't just about sharing your accomplishments – it's about celebrating them! Get ready to earn "brag points" for every post you create, comment you receive, and like you give. The top 3 users with the most brag points will be catapulted to the front page, inspiring others and basking in some well-deserved recognition. So, ditch the FOMO and join the Let's Brag movement! It's where your achievements shine bright and your self-confidence soars.
 
 
 ## Table of Contents
@@ -136,6 +138,8 @@ npm run start
 | [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
 | [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
 | [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
+
+
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 
