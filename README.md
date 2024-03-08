@@ -29,15 +29,29 @@ So that I can receive positive feedback, inspire others, and feel a sense of bel
 
 ```md
 GIVEN the user has installed the app,
-WHEN the user opens the app
-THEN I am presented with a feed of curated content showcasing other user’s achievements
-WHEN the user clicks on the star rating icons
-THEN the star illuminate dynamically, reflecting the user’s chosen rating
-WHEN the user clicks on the text box below a post
-THEN text box expands and becomes fully editable, allowing them to type their comment
-WHEN the user clicks the “Post” button
+WHEN the user opens the app,
+THEN the user will be presented with the main page of the app showcasing other users post about their achivements and travels with a picture on the top right.
+WHEN the user click the login option,
+THEN it will show two options, one for dashboard and one for sign up.
+WHEN the user click the option of login,
+THEN it will take the user to the app's login page where they could create an account for the app using their email.
+WHEN the user finished signing up,
+THEN the user will be brought into the app's dashboard page where they could post their own Brags by clicking the create post button that is available on the page.
+WHEN they click the create post button on the dashboard,
+THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements which can be typed as a title and post description with text boxes that is provided in the page.
+WHEN the user tries to put a post title and description on their post,
+THEN the title and/or the description text box expands and becomes fully editable, depending on which one they hover over or click, allowing them to type their post tile and/or description.
+WHEN the user clicks the dashboard option from the main page after logging in,
+THEN the user will be brought to the dashboard page.
+WHEN the user is in the dashboard page after posting something,
+THEN the user will be able to view their own post, and also update and delete the post of their choosing.
+WHEN the user click one of the post presented in the main page,
+THEN the user will be able to see more details regarding the post itself such as poster's name, post description, post ratings thats represented with starts, and a comments box.
+WHEN the user click the stars icon for the ratings within a post,
+THEN the user can give ratings for the post itself ranging from 1 star to 5 stars.
+WHEN the user tries to comment on the post,
+THEN comment text box expands and becomes fully editable, allowing them to type their comment.
 THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements.
-
 ```
 
 ## Technologies Used
