@@ -155,10 +155,10 @@ npm run start
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Prepared Presentation Slideshow  |
-| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
-| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Prepared Presentation Slideshow  |
+| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
+| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Contributed Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
 
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
