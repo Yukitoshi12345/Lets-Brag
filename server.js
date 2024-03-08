@@ -13,6 +13,7 @@ const cors = require('cors'); // CORS middleware
 const routes = require('./controllers'); // Import routes configuration
 const sequelize = require('./config/connection'); // Database connection setup
 const helpers = require('./utils/helpers'); // Custom helper functions
+// const uploadPicture = require('./public/scripts/uploadPicture')
 
 // ----------------------------------------------------------------
 
@@ -52,6 +53,7 @@ app.set('view engine', 'handlebars');
 // ----------------------------------------------------------------
 
 // Middleware to handle incoming data
+// app.use(uploadPicture);
 // ----------------------------------------------------------------
 
 // Middleware to parse incoming request bodies in JSON format
