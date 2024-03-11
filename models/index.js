@@ -1,7 +1,7 @@
 // Import model definitions
-const Brag = require('./brag');
-const Comment = require('./comment');
-const Rating = require('./rating');
+const Brag = require('./Brag');
+const Comment = require('./Comment');
+const Rating = require('./Rating');
 const User = require('./User');
 
 // Define Model Associations (Relationships)
