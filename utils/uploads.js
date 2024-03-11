@@ -1,12 +1,13 @@
 const multer = require('multer');
+const path= require("node:path");
 // Import the Brag and User models from the models directory
 
 const storage = multer.diskStorage({
     destination: (req, file, cb)=>{
-      cb(null, './public/images/uploads/');
+      cb(null, '/images/uploads/');
     },
     filename: (req, file, cb)=>{
-      cb(null, Date.now() + '-' + file.originalname);
+      cb(null, Date.now() + path.extname( file.originalname));
     } 
   });
   /*
