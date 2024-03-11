@@ -11,20 +11,20 @@
     "email": "andrii@mail.com",
     "password": "@Andrii123",
     "username": "awesomeandrii",
-    "profile_photo": "suyash2.jpg"
+    "profile_photo": "andrijpg.jpg"
   },
   {
     "id": "3",
     "email": "jonathan@mail.com",
     "password": "@Jonathan123",
     "username": "jollyjonathan",
-    "profile_photo": "suyash2.jpg"
+    "profile_photo": "jonathan.jpg"
   },
   {
     "id": "4",
     "email": "yuki@mail.com",
     "password": "@Yuki123",
     "username": "youngyuki",
-    "profile_photo": "suyash2.jpg"
+    "profile_photo": "yukijpg.jpg"
   }
 ]
