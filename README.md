@@ -169,3 +169,4 @@ _The roles mentioned above are rough representation of individual member's tasks
 ## License
 
 This project is licensed under the [MIT License](https://github.com/Yukitoshi12345/lets-brag/blob/main/LICENSE).
+
