@@ -29,8 +29,8 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the author's username
-          attributes: ['username', 'profile_photo'],
-        },
+          attributes: ['username', 'profile_photo']
+        }
         // {
         //   model: Rating, // Include associated ratings
         // },
@@ -75,8 +75,8 @@ router.get('/:id', withAuth, async (req, res) => {
       include: [
         {
           model: User, // Include the commenter's username
-          attributes: ['username', 'profile_photo'],
-        },
+          attributes: ['username', 'profile_photo', 'id'],
+        }
       ],
     });
 
@@ -96,14 +96,16 @@ router.get('/:id', withAuth, async (req, res) => {
     // Add comments to the post object
     post.rating= rating;
     post.comments = comments;
+ 
     res.render('post-detail', {
       //using spread operator
       ...post, // Spread post data for easy access in the template
       // post,
       pageTitle: 'Post',
       loggedIn: req.session.loggedIn,
-      loggedInUser: req.session.user, // Include user information for context
-      loggedInUserPhoto: req.session.photo
+      loggedInUserId:  req.session.userId // Include user information for context
+     
+      
     });
   } catch (error) {
     console.log(error); // Log any errors

@@ -14,18 +14,19 @@
             {{>rating-hearts}}
         </div>
         <div class="my-8 shadow-sm p-4">
-            <h2 class=" text-accent space-y-4 ">Comments</h2>
+            <h2 class=" text-accent space-y-4 ">Comments </h2>
             {{#if comments}}
-            {{#each comments as |comment|}}
-            {{>post-detail--comment-card}}
-            {{/each}}
+           
+                {{#each comments as |comment|}}
+                    {{> post-detail--comment-card commenterId=../loggedInUserId}}
+                {{/each}}
             {{else}}
-            <h2>There are no comments for this post yet!</h2>
+                <h2>There are no comments for this post yet!</h2>
             {{/if}}
 
         </div>
         <div class=" shadow-sm ">
-            {{>comment-form}}
+            {{>comment-form name='createForm'}}
         </div>
     </div>
 </article>

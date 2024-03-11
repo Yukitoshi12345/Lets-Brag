@@ -5,6 +5,8 @@ const { User } = require('../../models');
 // Import a custom authentication middleware for securing routes
 const withAuth = require('../../utils/auth');
 
+
+
 // Route handler to get a user's data by id (protected by withAuth middleware)
 router.get('/:id', withAuth, async (req, res) => {
   const id = req.params.id; // Extract the user id from the URL
@@ -33,9 +35,8 @@ router.get('/:id', withAuth, async (req, res) => {
     res.render('new-post', {
       ...user, // Spread the user data into the template variables
       pageTitle: 'New Post',
-      loggedIn: req.session.loggedIn, // Pass login status to the template
-      loggedInUser: req.session.user, // Pass logged-in username to the template
-      loggedInUserPhoto: req.session.photo
+      loggedIn: req.session.loggedIn, 
+      loggedInUserId: req.session.userId// Pass login status to the template
     });
   } catch (error) {
     console.log(error); // Log any errors
@@ -70,8 +71,7 @@ router.post('/', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.userId = dbUserData.id;
-      req.session.user = dbUserData.username;
-      req.session.photo = dbUserData.profile_photo;
+
       res
         .status(200)
         .json({ user: dbUserData, message: "Welcome to Let's Brag!" });
@@ -132,10 +132,6 @@ router.post('/login', async (req, res) => {
       req.session.loggedIn = true;
       // Store the user's ID in the session for future use
       req.session.userId = dbUserData.id;
-      // Store the user's username in the session for easy access
-      req.session.user = dbUserData.username;
-      req.session.photo = dbUserData.profile_photo;
-
       // Send a response with status code 200 (OK) and a JSON object containing the user data and a success message
       res
         .status(200)
@@ -163,6 +159,33 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+/*
+//get user by id
+// where id = session id
+//to display user info in the navbar
+router.get('/', async(req, res)=>{
+  const id= req.session.userId;
+  try {
+    const dbUserData = await User.findByPk(id, {
+      attributes: {
+        include: ['username', 'profile_photo'],
+      }
+    });
+    if (!dbUserData) {
+      // If user not found, send a 400 error
+      res.status(400).json({ message: 'No user exists.' });
+      return;
+    }
+    // Convert the user data to a plain JavaScript object and render the 'new-post' template
+    const user = dbUserData.get({ plain: true });
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error); // Log any errors
+    res.status(500).json(error); // Return a 500 error response
+  }
+});
+*/
 
 // Export the router object for use in the main application
 module.exports = router;
