@@ -4,6 +4,8 @@ $(window).ready(() => {
   const dashboardBtn = $('#dashboard'); // Button for accessing the dashboard
   const logoutBtn = $('#logout'); // Button for logging out
   const loginBtn = $('#login'); // Button for logging in
+  const loggedInUserEl = $('#loggedInUser');
+  const loggedInUserPhotoEl = $('#loggedInUserPhoto');
 
   // **Function to save a page reference to local storage**
   const saveReferencePageToStorage = (page) => {
@@ -47,12 +49,12 @@ $(window).ready(() => {
     // Save the reference page ("dashboard") to local storage for potential redirection after login/signup
     saveReferencePageToStorage('dashboard');
     try {
-      const response = await fetch(`/dashboard/`, {
+      const response = await fetch(`/dashboard`, {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }, // Set Content-Type header (optional for GET requests)
       });
       if (response.ok) {
-        window.location.replace(`/dashboard/`); // Redirect the user to the dashboard page
+        window.location.replace(`/dashboard`); // Redirect the user to the dashboard page
       } else {
         alert('Failed to open the dashboard');
       }
@@ -61,8 +63,36 @@ $(window).ready(() => {
     }
   };
 
+  const pageLoadHandler = async()=>{
+    /*
+    try {
+      const response = await fetch('/api/users/', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }, // Set Content-Type header (optional for GET requests)
+      });
+      if (response.ok) {
+        const userData = await response.json(); // Parse JSON response
+        const username = userData.username;
+        const photo = userData.profile_photo;
+        loggedInUserEl.text(`G'day, ${username}!` );
+        loggedInUserPhotoEl.attr('src', `/images/${photo}`);
+       
+        // window.location.replace(`/dashboard`); // Redirect the user to the dashboard page
+      } else {
+        //alert('Failed to open the dashboard');
+        //do nothing
+        //user is not logged in
+        //there is no session userId
+      }
+    } catch (error) {
+      console.log(error); // Log errors for debugging
+    }
+    */
+  };
+
   // Attach event listeners to buttons
   logoutBtn.on('click', logoutHandler);
   loginBtn.on('click', loginHandler);
   dashboardBtn.on('click', dashboardLinkHandler);
+  $(window).on('load', pageLoadHandler);
 });

@@ -1,11 +1,14 @@
 // Import the Router object from Express for defining routes
 const router = require('express').Router();
 // Import the Brag and User models from the models directory
-const { Brag, User } = require('../models');
+const { Brag, User } = require('../../models');
+// Import the custom authentication middleware
+const withAuth = require('../../utils/auth');
 
 // Route to get one post/article by given post id
 // Populates the post data and displays in the form for user to edit it
-router.get('/dashboard/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
+  // router.get('/dashboard/:id', async (req, res) => {
   // Extract the post ID from the URL parameters
   const id = req.params.id;
   try {
@@ -48,5 +51,38 @@ router.get('/dashboard/:id', async (req, res) => {
   }
 });
 
+// Use withAuth middleware to prevent access to route
+// Route handler to display the dashboard (protected by withAuth middleware)
+router.get('/', withAuth, async (req, res) => {
+  // router.get('/dashboard', withAuth, async (req, res) => {
+  try {
+    if (!req.session.loggedIn) {
+      res.redirect('/login');
+      return;
+    }
+    // Find the logged in user based on the session ID
+    // Fetch the logged-in user's data, excluding the password and including related brags
+    const dbUserData = await User.findByPk(req.session.userId, {
+      attributes: { exclude: ['password'] }, // Exclude password from user data
+      include: [{ model: Brag }],
+    });
+
+    // Convert the fetched data to a plain JavaScript object
+    const user = dbUserData.get({ plain: true });
+
+    // Render the 'dashboard' template with user data, login status, and username
+    res.render('dashboard', {
+      ...user, // Spread user data into template variables
+      // user, // Original line (redundant with spread operator)
+      loggedIn: true, // Set explicit login status (optional)
+      pageTitle: 'Dashboard',
+      loggedInUser: req.session.user,
+      loggedInUserPhoto: req.session.photo
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
 // Export the router object to make the routes available to the main application
 module.exports = router;

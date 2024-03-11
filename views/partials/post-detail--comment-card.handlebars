@@ -1,22 +1,33 @@
 <div class='card w-full shadow-xl'>
   <div class='card-body'>
-    <h2 class='card-title'>
-      <div class='flex-none gap-4 shadow-xl hover:opacity-90'>
-        <div class='avatar inline-block'>
-          <div class='w-12 mask mask-hexagon'>
-            <img src='/images/{{user.profile_photo}}'/>
+    <h2 class='card-title flex justify-between'>
+      <div>
+        <div class=' col-span-1 flex-none gap-4 shadow-xl hover:opacity-90'>
+          <div class='avatar inline-block'>
+            <div class='w-12 mask mask-hexagon'>
+              <img src='/images/{{user.profile_photo}}'/>
+            </div>
           </div>
-        </div>
-        <div class='inline-block'>
-          <div>
-            {{user.username}}
-          </div>
-          <div>
-            {{formatDate comment_date}}
+          <div class='inline-block'>
+            <div>
+              {{user.username}}
+            </div>
+            <div>
+              {{formatDate comment_date}}
+            </div>
           </div>
         </div>
       </div>
+ 
+      {{#ifEquals user.id commenterId}}
+      {{> comment-menu commenterId = user.id}}
+
+      {{/ifEquals}}
+
     </h2>
-    <div>{{content}}</div>
+    <div class="content">{{content }}</div>
+    {{#ifEquals user.id commenterId}}
+      {{> comment-form contentToEdit = content name='editForm' visible='hidden'}}
+    {{/ifEquals}}
   </div>
 </div>

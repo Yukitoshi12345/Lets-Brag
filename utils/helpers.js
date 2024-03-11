@@ -19,4 +19,7 @@ module.exports = {
 
   // Function to format a number to have two decimal places
   formatNumber: (num) => parseFloat(num).toFixed(2),
+  ifEquals: function (val1, val2, options){
+    return(val1 === val2) ? options.fn(this) :  options.inverse(this);
+  }
 };

@@ -1,4 +1,3 @@
-// Import required modules
 const { Model, DataTypes } = require('sequelize'); // Sequelize model and data types
 const sequelize = require('../config/connection'); // Sequelize connection instance
 const dayjs = require('dayjs'); // Library for date/time manipulation

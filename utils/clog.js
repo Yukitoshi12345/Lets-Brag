@@ -3,22 +3,22 @@
 // This function will be used as middleware
 const clog = (req, res, next) => {
   // Define a constant for the cyan color code used for formatting console output
-  const fgCyan = '\x1b[36m';
+  const fgYellow = '\x1b[3;33m';
   // Use a switch statement to handle different HTTP methods
   switch (req.method) {
     case 'GET': {
       // Log a green colored message for GET requests
-      console.info(`📗 ${fgCyan}${req.method} request to ${req.path}`);
+      console.info(`📗 ${fgYellow}${req.method} request to ${req.path}`);
       break;
     }
     case 'POST': {
       // Log a blue colored message for POST requests
-      console.info(`📘 ${fgCyan}${req.method} request to ${req.path}`);
+      console.info(`📘 ${fgYellow}${req.method} request to ${req.path}`);
       break;
     }
     default:
       // Log an orange colored message for any other method
-      console.log(`📙${fgCyan}${req.method} request to ${req.path}`);
+      console.log(`📙${fgYellow}${req.method} request to ${req.path}`);
   }
 
   // Call the next middleware function in the chain
