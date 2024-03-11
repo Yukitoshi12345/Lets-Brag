@@ -5,9 +5,9 @@ const { User } = require('../../models');
 const upload = require('../../utils/uploads');
 
 
-router.put('/', upload.single('avatar'), async(req, res)=>{
+router.post('/', upload.single('avatar'), async(req, res)=>{
     try {
-      
+      console.log('---------------------------------------');
       console.log(req.file);
       const dbUpdatedUser = await User.update(
         {

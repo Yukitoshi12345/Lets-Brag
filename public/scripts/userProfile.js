@@ -6,11 +6,10 @@ $(window).ready(() => {
   const submitHandler = async(event) =>{
     event.preventDefault();
     const id = $(event.target).data('id');
-    
     try {
         const response = await fetch('/upload', {
         // Send PUT request to update the brag post with ID
-        method: 'PUT',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' }, // Set content type header
       });
       if (response.ok) {
