@@ -1,5 +1,4 @@
 // Import required modules
-// ----------------------------------------------------------------
 // Core modules for application setup
 const express = require('express'); // Web application framework
 const exphbs = require('express-handlebars'); // Handlebars templating engine
@@ -9,7 +8,6 @@ const session = require('express-session'); // Session management
 const SequelizeStore = require('connect-session-sequelize')(session.Store); // Session store using Sequelize
 const cors = require('cors'); // CORS middleware
 const { clog } = require('./utils/clog');
-// ----------------------------------------------------------------
 
 // Application-specific modules
 const routes = require('./controllers'); // Import routes configuration
@@ -28,7 +26,6 @@ const PORT = process.env.PORT || 3001; // Use PORT from environment variable or 
 // Configure custom Handlebars
 const hbs = exphbs.create({ helpers });
 
-// ----------------------------------------------------------------
 
 // Set up sessions
 const sess = {
@@ -45,7 +42,6 @@ const sess = {
     maxAge: 1000 * 60 * 60, //expire in an hour of idle
   },
 };
-console.log('line 50');
 app.use(session(sess));
 
 // Configure Handlebars as the view engine
@@ -61,6 +57,7 @@ app.set('view engine', 'handlebars');
 // ----------------------------------------------------------------
 
 app.use(clog);
+
 
 // Middleware to parse incoming request bodies in JSON format
 app.use(express.json());

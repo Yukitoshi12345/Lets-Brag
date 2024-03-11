@@ -160,7 +160,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
-/*
+
 //get user by id
 // where id = session id
 //to display user info in the navbar
@@ -185,7 +185,7 @@ router.get('/', async(req, res)=>{
     res.status(500).json(error); // Return a 500 error response
   }
 });
-*/
+
 
 // Export the router object for use in the main application
 module.exports = router;

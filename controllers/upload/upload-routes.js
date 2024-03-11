@@ -7,9 +7,7 @@ const upload = require('../../utils/uploads');
 
 router.post('/', upload.single('avatar'), async(req, res)=>{
     try {
-      console.log('---------------------------------------');
-      console.log(req.file.filename);
-      const dbUpdatedUser = await User.update(
+      await User.update(
         {
           profile_photo: req.file.filename
         },
@@ -20,15 +18,35 @@ router.post('/', upload.single('avatar'), async(req, res)=>{
         }
 
       );
-      // req.session.save(()=>{
-      //   req.session.photo=dbUpdatedUser.profile_photo;
-      // });
-      // Respond with a success status code (200) and the updated post data
-      res.status(200).json(dbUpdatedUser);
+      res.redirect(`/dashboard/`);
+      // res.render('dashboard');
+      // res.status(200).json(dbUpdatedUser);
     } catch (error) {
       console.log(error);
       res.status(500).json(error);
     }
+  });
+
+  router.post('/', upload.single('brag'), async(req, res)=>{
+    // try {
+    //   await Brag.update(
+    //     {
+    //       post_photo: req.file.filename
+    //     },
+    //     {
+    //       where:{
+    //         id: req.session.userId
+    //       }
+    //     }
+
+    //   );
+    //   res.redirect(`/dashboard/`);
+    //   // res.render('dashboard');
+    //   // res.status(200).json(dbUpdatedUser);
+    // } catch (error) {
+    //   console.log(error);
+    //   res.status(500).json(error);
+    // }
   });
 
 // Export the router for use in other parts of the application
