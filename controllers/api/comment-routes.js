@@ -82,7 +82,7 @@ router.put('/:id', withAuth, async (req, res) => {
   } catch (error) {
     // Catch any errors and respond with a bad request status code (400) with the error message
     console.log(error);
-    res.status(400).json(err);
+    res.status(400).json(error);
   }
 });
 

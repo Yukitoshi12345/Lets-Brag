@@ -16,6 +16,8 @@ const routes = require('./controllers'); // Import routes configuration
 const sequelize = require('./config/connection'); // Database connection setup
 const helpers = require('./utils/helpers'); // Custom helper functions
 
+
+
 // Require the upload middleware
 const upload = require('./utils/uploads');
 
