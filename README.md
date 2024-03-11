@@ -2,7 +2,9 @@
 
 <h1 align ="center">Let's Brag!</h1>
 
-Tired of keeping your achievements under wraps? Introducing Let’s Brag, the social media platform dedicated to celebrating your wins, big and small. Share your accomplishments, travel adventures, and anything else you are proud of with a community that encourages self-expression and positive vibes. Earn “brag points” for your posts, with the top 5 users taking centre stage on the front page to inspire others and soak up some well-deserved recognition. Let’s Brag: where your achievements shine bright.
+Tired of keeping your achievements under wraps and feeling like your victories go unnoticed? Let's Brag is here to change that! It's the social media platform designed specifically for celebrating your wins, big and small. Whether you aced that presentation at work, finally mastered that yoga pose, or embarked on the dream vacation you've been saving for, Let's Brag is your space to share it all with a supportive community that thrives on positive vibes and self-expression.
+
+But Let's Brag isn't just about sharing your accomplishments – it's about celebrating them! Get ready to earn "brag points" for every post you create, comment you receive, and like you give. The top 3 users with the most brag points will be catapulted to the front page, inspiring others and basking in some well-deserved recognition. So, ditch the FOMO and join the Let's Brag movement! It's where your achievements shine bright and your self-confidence soars.
 
 
 ## Table of Contents
@@ -12,7 +14,7 @@ Tired of keeping your achievements under wraps? Introducing Let’s Brag, the so
 - [Usage](#usage)
 - [Test Instruction](#test-instruction)
 - [Screenshots](#screenshots)
-- [Output](#output)
+- [Overview](#overview)
 - [Contribution/Roles](#contributionroles)
 - [Installation Instruction](#installation-instruction)
 - [License](#license)
@@ -28,44 +30,69 @@ So that I can receive positive feedback, inspire others, and feel a sense of bel
 ## Acceptance Criteria
 
 ```md
-GIVEN the user has installed the app,
-WHEN the user opens the app,
-THEN the user will be presented with the main page of the app showcasing other users post about their achivements and travels with a picture on the top right.
-WHEN the user click the login option,
-THEN it will show two options, one for dashboard and one for sign up.
-WHEN the user click the option of login,
-THEN it will take the user to the app's login page where they could create an account for the app using their email.
-WHEN the user finished signing up,
-THEN the user will be brought into the app's dashboard page where they could post their own Brags by clicking the create post button that is available on the page.
-WHEN they click the create post button on the dashboard,
-THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements which can be typed as a title and post description with text boxes that is provided in the page.
-WHEN the user tries to put a post title and description on their post,
-THEN the title and/or the description text box expands and becomes fully editable, depending on which one they hover over or click, allowing them to type their post tile and/or description.
-WHEN the user clicks the dashboard option from the main page after logging in,
-THEN the user will be brought to the dashboard page.
-WHEN the user is in the dashboard page after posting something,
-THEN the user will be able to view their own post, and also update and delete the post of their choosing.
-WHEN the user click one of the post presented in the main page,
-THEN the user will be able to see more details regarding the post itself such as poster's name, post description, post ratings thats represented with starts, and a comments box.
-WHEN the user click the stars icon for the ratings within a post,
-THEN the user can give ratings for the post itself ranging from 1 star to 5 stars.
-WHEN the user tries to comment on the post,
-THEN comment text box expands and becomes fully editable, allowing them to type their comment.
-THEN the app opens their photo gallery, allowing them to choose an image to share alongside their achievements.
+**Initial Visit**
+GIVEN I visit the Let's Brag website for the first time,
+WHEN I land on the homepage,
+THEN I am greeted by the main page showcasing other users' achievements and travels, with a picture prominently displayed on the top right.
+
+**Login and Sign up**
+WHEN I click the login option,
+THEN it will show two options: one for dashboard and one for sign up.
+WHEN I click the option of login,
+THEN I am taken to the login page where I can create an account using my email.
+WHEN I finish signing up,
+THEN I am brought to the dashboard page.
+
+**Creating Brags**
+When I click the create post button on the dashboard,
+THEN the Let's Brag website opens my photo gallery, allowing me to choose an image to share alongside my achievements.
+THEN I can type my achievements as a title and post description with the provided text boxes on the page.
+WHEN I try to put a post title and description on my post,
+THEN the title and/or the description text box expands and becomes fully editable, depending on which one I hover over or click, allowing me to type my post title and/or description.
+
+**Dashboard and Post Management**
+WHEN I click the dashboard option from the main page after logging in,
+THEN I am brought to the dashboard page.
+WHEN I am in the dashboard page after posting something,
+THEN I can view my own post, and also update and delete the post of my choosing.
+
+**Viewing and Interacting with Posts**
+When I click one of the posts presented in the main page,
+Then I can see more details regarding the post itself, such as the poster's name, post description, post ratings represented by stars, and a comments box.
+When I click the heart icon for the ratings within a post,
+Then I can give a rating for the post itself, ranging from 1 heart to 5 hearts.
+When I try to comment on the post,
+Then the comment text box expands and becomes fully editable, allowing me to type my comment.
+
+**Bonus Feature: The Brag Spotlight**
+Keep an eye out for a dedicated section on the homepage.
+Here, Let's Brag recognises the top 3 users with the most "brag points" earned through post ratings and interactions.
 ```
 
-## Technologies Used
+## Technologies Used 
 - CSS
 - JavaScript
 - Node.js
 - Bcrypt (version 5.1.1)
+- CORS (version 2.8.5)
+- Dayjs (version 1.11.10)
 - Express.js (version 4.18.2)
 - Express-Handlebars (version 7.1.2)
 - Express-Session (version 1.18.0)
+- Multer (version 1.4.5-lts.1)
 - MySQL2 (version 3.9.1)
 - Sequelize (version 6.37.1)
 - Connect Session Sequelize (version 7.1.7)
 - Dotenv (version 16.4.5)
+
+## Development Dependencies Used
+- Tailwindcss (version 3.4.1)
+- @Tailwindcss/typography (version 0.5.19)
+- Daisyui (version 4.7.2)
+- Eslint (version 8.57.0)
+- Eslint Config Prettier (version 9.1.0)
+- Prettier (version 3.2.5)
+- Nodemon (version 3.1.0)
 
 ## Installation Instruction
 
@@ -83,76 +110,56 @@ THEN the app opens their photo gallery, allowing them to choose an image to shar
 
 ## Test Instruction
 
-#### Command to install packages and any packages it depends on:
+To use this project:
 
-`npm install`
-
-#### Command to install Express dependencies:
-
-`npm i express`
-
-#### Command to install Express-Handlebars dependencies:
-
-`npm i express-handlebars`
-
-#### Command to install Express-Session dependencies:
-
-`npm i express-session`
-
-#### Command to install MySQL2 dependencies:
-
-`npm i mysql2`
-
-#### Command to install Bcrypt dependencies:
-
-`npm i bcrypt`
-
-#### Command to install Sequelize dependencies:
-
-`npm i sequelize`
-
-#### Command to install Connect-Session-Sequelize dependencies:
-
-`npm i connect-session-sequelize`
-
-#### Command to install Dotenv dependencies:
-
-`npm i dotenv`
-
-#### Command to install Eslint Dev dependencies:
-
-`npm i eslint --save-dev`
-
-#### Command to install Eslint-config-prettier Dev dependencies:
-
-`npm i eslint-config-prettier --save-dev`
-
-#### Command to install Prettier Dev dependencies:
-
-`npm i prettier --save-dev`
-
-#### Run seed:
-
-`npm run seed`
-
-#### Start running:
-
-`npm start`
+- Get a copy of this repo to your local machine.
+- Install the Node Module
+```
+npm install
+```
+- Change the .env copy file to .env and insert your database password
+- And, start the `Express Server` by typing in the following:
+```
+npm run start
+```
+- Go to this link: http://localhost:3001
 
 ## Screenshots
 
 ![]()
 
-## Output
+## Overview
+
+#### Features:
+
+- 
+- 
+
+#### Motivation For Development:
+
+
+
+#### Challenges:
+
+- Merge Conflict
+- Time Limit
+
+#### Successes:
+
+-Learnt multer
+- Got a full grasp understanding of MVC
+- Overcoming slow start
+
 
 ## Contribution/Roles
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | Task<br> Task<br> Task<br>Task |
-| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | Task                           |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | Task<br> Task                  |
-| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | Task <br> Task <br> Task       |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Prepared Presentation Slideshow  |
+| [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
+| [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Contributed Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
+
 
 _The roles mentioned above are rough representation of individual member's tasks. Throughout the project, we all collaborated and contributed to each other's coding._
 

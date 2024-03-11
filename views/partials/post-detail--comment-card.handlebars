@@ -25,7 +25,7 @@
       {{/ifEquals}}
 
     </h2>
-    <div class="content">{{content }}</div>
+    <div class="commentContent">{{content }}</div>
     {{#ifEquals user.id commenterId}}
       {{> comment-form contentToEdit = content name='editForm' visible='hidden'}}
     {{/ifEquals}}
