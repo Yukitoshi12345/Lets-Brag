@@ -98,7 +98,7 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 
 | Steps            | Details                                                        |
 | ---------------- | -------------------------------------------------------------- |
-| Live application | [Let's Brag!](https://yukitoshi12345.github.io/lets-brag/) |
+| Live application | [Let's Brag!](https://lets-brag-b258984e3793.herokuapp.com/) |
 | Clone this repo  | ` git clone git@github.com:Yukitoshi12345/lets-brag.git` |
 | run on vs        | `cd ..`                                                        |
 ## Installation Instruction
@@ -125,14 +125,24 @@ npm run start
 
 ## Screenshots
 
-![]()
+![](/public/images/Screenshot%201.png)
+
+![](/public/images/Screenshot%202.png)
+
+![](/public/images/Screenshot%203.png)
+
+![](/public/images/Screenshot%204.png)
+
+![](/public/images/Screenshot%205.png)
 
 ## Overview
 
 #### Features:
 
-- 
-- 
+- Creating Post
+- Commenting
+- Login
+- Rating
 
 #### Motivation For Development:
 
@@ -169,3 +179,4 @@ _The roles mentioned above are rough representation of individual member's tasks
 ## License
 
 This project is licensed under the [MIT License](https://github.com/Yukitoshi12345/lets-brag/blob/main/LICENSE).
+
