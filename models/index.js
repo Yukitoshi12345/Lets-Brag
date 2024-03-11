@@ -1,6 +1,6 @@
 // Import model definitions
 const Brag = require('./brag');
-const Comment = require('./Comment');
+const Comment = require('./comment');
 const Rating = require('./rating');
 const User = require('./User');
 
