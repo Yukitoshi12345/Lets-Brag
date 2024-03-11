@@ -104,7 +104,6 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 ## Installation Instruction
 
 - [Install nodejs and npm](https://nodejs.org/en/download)
-- [Install Insomnia](https://insomnia.rest/download)
 - [Install MySQL](https://dev.mysql.com/downloads/mysql/)
 
 ## Test Instruction
@@ -158,9 +157,9 @@ Our motivation to develop this project is to create a safe space for high achiev
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars  |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Completed server.js |
 | [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
-| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
+| [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Usage of New Package: Multer <br> - Assisted with Scripts <br> - Prepared Presentation Slideshow                 |
 | [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Contributed Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |
 
 
