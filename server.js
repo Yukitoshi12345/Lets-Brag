@@ -15,8 +15,10 @@ const {clog} = require('./utils/clog');
 const routes = require('./controllers'); // Import routes configuration
 const sequelize = require('./config/connection'); // Database connection setup
 const helpers = require('./utils/helpers'); // Custom helper functions
+
 // Require the upload middleware
 const upload = require('./utils/uploads');
+
 
 // Create an Express application instance
 const app = express();
@@ -54,6 +56,7 @@ app.set('view engine', 'handlebars');
 // ----------------------------------------------------------------
 
 // Middleware to handle incoming data
+// app.use(uploadPicture);
 // ----------------------------------------------------------------
 app.use(clog);
 
