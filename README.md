@@ -1,4 +1,4 @@
-![CSS](https://img.shields.io/badge/CSS-red) ![JavaScript](https://img.shields.io/badge/JavaScript-orange) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-hotpink) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-sandybrown) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Connect-Session-Sequelize@7.1.7](https://img.shields.io/badge/Connect_Session_Sequelize@7.1.7-lavender) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) 
+![CSS](https://img.shields.io/badge/CSS-red) ![JavaScript](https://img.shields.io/badge/JavaScript-orange) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Bcrypt@5.1.1](https://img.shields.io/badge/Bcrypt@5.1.1-gold) ![CORS@2.8.5](https://img.shields.io/badge/CORS@2.8.5-firebrick) ![Day.js@1.11.10](https://img.shields.io/badge/Day.js@1.11.10-deepskyblue) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-purple) ![Express-Handlebars@7.1.2](https://img.shields.io/badge/Express_Handlebars@7.1.2-hotpink) ![Express-Session@1.18.0](https://img.shields.io/badge/Express_Session@1.18.0-sandybrown) ![Multer@1.4.5](https://img.shields.io/badge/Multer@1.4.5-lightcoral) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-lightgreen) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Connect-Session-Sequelize@7.1.7](https://img.shields.io/badge/Connect_Session_Sequelize@7.1.7-lavender) ![Dotenv@16.4.5](https://img.shields.io/badge/Dotenv@16.4.5-grey) 
 
 <h1 align ="center">Let's Brag!</h1>
 
@@ -75,7 +75,7 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 - Node.js
 - Bcrypt (version 5.1.1)
 - CORS (version 2.8.5)
-- Dayjs (version 1.11.10)
+- Day.js (version 1.11.10)
 - Express.js (version 4.18.2)
 - Express-Handlebars (version 7.1.2)
 - Express-Session (version 1.18.0)
@@ -94,12 +94,6 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 - Prettier (version 3.2.5)
 - Nodemon (version 3.1.0)
 
-## Installation Instruction
-
-- [Install nodejs and npm](https://nodejs.org/en/download)
-- [Install Insomnia](https://insomnia.rest/download)
-- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
-
 ## Usage
 
 | Steps            | Details                                                        |
@@ -107,16 +101,22 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 | Live application | [Let's Brag!](https://yukitoshi12345.github.io/lets-brag/) |
 | Clone this repo  | ` git clone git@github.com:Yukitoshi12345/lets-brag.git` |
 | run on vs        | `cd ..`                                                        |
+## Installation Instruction
+
+- [Install nodejs and npm](https://nodejs.org/en/download)
+- [Install Insomnia](https://insomnia.rest/download)
+- [Install MySQL](https://dev.mysql.com/downloads/mysql/)
 
 ## Test Instruction
 
 To use this project:
 
 - Get a copy of this repo to your local machine.
-- Install the Node Module
+- Install the `Node Module`
 ```
 npm install
 ```
+- Install `MySQL2`
 - Change the .env copy file to .env and insert your database password
 - And, start the `Express Server` by typing in the following:
 ```
@@ -137,25 +137,28 @@ npm run start
 
 #### Motivation For Development:
 
-
+Our motivation to develop this project is to create a safe space for high achievers. On traditional social media platforms such as Facebook and Instagram, celebrating your wins can sometimes feel like bragging, leading to negativity or awkwardness. We wanted to change that. Let's Brag is a haven for those who crave a platform to freely share their accomplishments, without fear of judgment. It's a community built on encouragement and positive vibes, where high achievers can celebrate their victories and inspire others on their journeys.
 
 #### Challenges:
 
 - Merge Conflict
 - Time Limit
+- Multer Issue
+- Availabilities Issues
 
 #### Successes:
 
--Learnt multer
+- Learnt multer
 - Got a full grasp understanding of MVC
 - Overcoming slow start
-
+- We were able to satisfy the acceptance criteria we set out to satisfy
+- Gaining confidence from working as a group
 
 ## Contribution/Roles
 
 | Contributors                                                 | Roles | Task                           |
 | ------------------------------------------------------------ | ----- | ------------------------------ |
-| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars <br> - Prepared Presentation Slideshow  |
+| [Yukitoshi Imaizumi-Zhou](https://github.com/yukitoshi12345) | Project Manager & Full-Stack Developer  | - Assigned Tasks and Managed Progress <br> - Created and Maintained Github Repository <br> - Created and Completed README <br> - Contributed Models and Controllers<br> - Login, Post-Detail, and Post-Detail Comment Card Handlebars  |
 | [Andrii Medvediev](https://github.com/AndriiMedvediev987)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Seeds Completed <br> - Configuration Completed                        |
 | [Jonathan Santoso](https://github.com/Johnnnnnnnnnnnnnnnnnnnnnn)                              | Full-Stack Developer  | - Contributed Models and Controllers <br> - Usage of New Package: Multer <br> - Completed server.js <br> - Prepared Presentation Slideshow                 |
 | [Suyash Maharjan](https://github.com/simplesuyash)                              | UI Designer & Full-Stack Developer  | - Lead Coding Team <br> - Developed User Interface (Tailwind and DaisyUI) <br> - Contributed Models and Controllers <br> - Views Completed and Functioning <br> - Scripts Completed <br> - Resolving Errors and Issues     |

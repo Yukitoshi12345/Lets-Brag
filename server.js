@@ -18,6 +18,9 @@ const helpers = require('./utils/helpers'); // Custom helper functions
 
 
 
+// Require the upload middleware
+const upload = require('./utils/uploads');
+
 
 // Create an Express application instance
 const app = express();
