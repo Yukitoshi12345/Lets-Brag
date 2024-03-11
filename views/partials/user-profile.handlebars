@@ -20,16 +20,6 @@
         {{/if}}
     </div>
 </div>
-{{#unless pprofile_photo}}
-    <form enctype="multipart/form-data" method='POST' action='/upload'>
-        <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" name="avatar" />
-        {{#if id}}
-            <input type="submit" value="Upload " class="btn btn-accent" data-id="{{id}}">
-        {{else}}
-            <input type="submit" value="Upload " class="btn btn-accent" data-id="{{user.id}}">
-        {{/if}}
-    </form>
 
-{{/unless}}
 
 {{!-- <script src="/scripts/userProfile.js" type="application/javascript"></script> --}}
