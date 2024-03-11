@@ -125,14 +125,24 @@ npm run start
 
 ## Screenshots
 
-![]()
+![](/public/images/Screenshot%201.png)
+
+![](/public/images/Screenshot%202.png)
+
+![](/public/images/Screenshot%203.png)
+
+![](/public/images/Screenshot%204.png)
+
+![](/public/images/Screenshot%205.png)
 
 ## Overview
 
 #### Features:
 
-- 
-- 
+- Creating Post
+- Commenting
+- Login
+- Rating
 
 #### Motivation For Development:
 
