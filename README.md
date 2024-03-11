@@ -98,7 +98,7 @@ Here, Let's Brag recognises the top 3 users with the most "brag points" earned t
 
 | Steps            | Details                                                        |
 | ---------------- | -------------------------------------------------------------- |
-| Live application | [Let's Brag!](https://yukitoshi12345.github.io/lets-brag/) |
+| Live application | [Let's Brag!](https://lets-brag-b258984e3793.herokuapp.com/) |
 | Clone this repo  | ` git clone git@github.com:Yukitoshi12345/lets-brag.git` |
 | run on vs        | `cd ..`                                                        |
 ## Installation Instruction
