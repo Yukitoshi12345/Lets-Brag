@@ -1,3 +1,10 @@
+<form enctype="multipart/form-data" method='POST' action='/upload/brag'>
+<label class="block text-blue-300 py-2 font-bold mb-2" for="brag">
+       Upload blog post photo
+    </label>
+    <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" name="brag" />
+    <input type="submit" value="Upload " class="btn btn-accent">
+</form>
 <form class=" opacity-95 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-10 w-full">
 
 
@@ -18,6 +25,7 @@
     <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm ">
         Please provide a post content.
     </p>
+
     <button class="btn btn-accent text-accent-content"  type="button" id="create" disabled>Create New Post </button>
     <button class="btn btn-accent text-accent-content "  type="button" id="cancel" >Cancel </button>
 </form>

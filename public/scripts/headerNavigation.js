@@ -6,6 +6,7 @@ $(window).ready(() => {
   const loginBtn = $('#login'); // Button for logging in
   const loggedInUserEl = $('#loggedInUser');
   const loggedInUserPhotoEl = $('#loggedInUserPhoto');
+  const headerEl =$('header');
 
   // **Function to save a page reference to local storage**
   const saveReferencePageToStorage = (page) => {
@@ -64,7 +65,7 @@ $(window).ready(() => {
   };
 
   const pageLoadHandler = async()=>{
-    /*
+    let isReload = false;
     try {
       const response = await fetch('/api/users/', {
         method: 'GET',
@@ -76,8 +77,12 @@ $(window).ready(() => {
         const photo = userData.profile_photo;
         loggedInUserEl.text(`G'day, ${username}!` );
         loggedInUserPhotoEl.attr('src', `/images/${photo}`);
-       
-        // window.location.replace(`/dashboard`); // Redirect the user to the dashboard page
+        
+        headerEl.load();
+        /* be careful below of recursive page refresh
+          window.location.reload();
+        */
+      
       } else {
         //alert('Failed to open the dashboard');
         //do nothing
@@ -87,7 +92,7 @@ $(window).ready(() => {
     } catch (error) {
       console.log(error); // Log errors for debugging
     }
-    */
+    
   };
 
   // Attach event listeners to buttons
