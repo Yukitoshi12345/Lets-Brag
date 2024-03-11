@@ -26,6 +26,7 @@ const PORT = process.env.PORT || 3001; // Use PORT from environment variable or 
 // Configure custom Handlebars
 const hbs = exphbs.create({ helpers });
 
+
 // Set up sessions
 const sess = {
   secret: 'my secret',
@@ -54,7 +55,9 @@ app.set('view engine', 'handlebars');
 // Middleware to handle incoming data
 // app.use(uploadPicture);
 // ----------------------------------------------------------------
-// app.use(clog);
+
+app.use(clog);
+
 
 // Middleware to parse incoming request bodies in JSON format
 app.use(express.json());
