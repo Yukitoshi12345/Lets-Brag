@@ -11,7 +11,6 @@ const cors = require('cors'); // CORS middleware
 const { clog } = require('./utils/clog');
 // ----------------------------------------------------------------
 
-console.log('Hello Line 14');
 // Application-specific modules
 const routes = require('./controllers'); // Import routes configuration
 const sequelize = require('./config/connection'); // Database connection setup
@@ -20,7 +19,6 @@ const helpers = require('./utils/helpers'); // Custom helper functions
 // Require the upload middleware
 const upload = require('./utils/uploads');
 
-console.log('I hope this isnt where it break');
 // Create an Express application instance
 const app = express();
 
@@ -31,7 +29,7 @@ const PORT = process.env.PORT || 3001; // Use PORT from environment variable or 
 const hbs = exphbs.create({ helpers });
 
 // ----------------------------------------------------------------
-console.log('cool');
+
 // Set up sessions
 const sess = {
   secret: 'my secret',
@@ -53,7 +51,6 @@ app.use(session(sess));
 // Configure Handlebars as the view engine
 // ----------------------------------------------------------------
 
-console.log('line 56');
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -62,7 +59,7 @@ app.set('view engine', 'handlebars');
 // Middleware to handle incoming data
 // app.use(uploadPicture);
 // ----------------------------------------------------------------
-console.log('line 65');
+
 app.use(clog);
 
 // Middleware to parse incoming request bodies in JSON format
