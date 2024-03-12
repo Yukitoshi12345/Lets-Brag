@@ -16,7 +16,6 @@ router.post('/', upload.single('avatar'), async(req, res)=>{
             id: req.session.userId
           }
         }
-
       );
       res.redirect(`/dashboard/`);
       // res.render('dashboard');
@@ -27,8 +26,11 @@ router.post('/', upload.single('avatar'), async(req, res)=>{
     }
   });
 
-  router.post('/', upload.single('brag'), async(req, res)=>{
- 
+  router.post('/brag', upload.single('brag'), async(req, res)=>{
+    // res.status(200).json(req.file.filename);
+    res.render('new-post',{
+      uploadResult: req.file.filename
+    });
   });
 
 // Export the router for use in other parts of the application

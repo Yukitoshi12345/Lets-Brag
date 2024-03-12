@@ -5,6 +5,7 @@ $(window).ready(() => {
   const titleInput = $('#title'); // Input field for the brag title
   const postTxtArea = $('#post'); // Text area for the brag content
   const cancelBtn = $('#cancel'); // Button for canceling brag creation
+  const outputEl = $('output');
 
   //when title input value changed
   //create button is enabled only when both title and content are not empty
@@ -29,6 +30,7 @@ $(window).ready(() => {
         body: JSON.stringify({
           title: $.trim(titleInput.val()), // Send trimmed title value
           content: $.trim(postTxtArea.val()), // Send trimmed content value
+          post_photo: outputEl.text()
         }),
         headers: { 'Content-Type': 'application/json' },
       });
