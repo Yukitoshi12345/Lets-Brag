@@ -28,25 +28,7 @@ router.post('/', upload.single('avatar'), async(req, res)=>{
   });
 
   router.post('/', upload.single('brag'), async(req, res)=>{
-    try {
-      await Brag.update(
-        {
-          post_photo: req.file.filename
-        },
-        {
-          where:{
-            id: req.session.userId
-          }
-        }
-
-      );
-      res.redirect(`/dashboard/`);
-      // res.render('dashboard');
-      // res.status(200).json(dbUpdatedUser);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
-    }
+ 
   });
 
 // Export the router for use in other parts of the application

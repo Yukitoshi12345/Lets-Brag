@@ -1,5 +1,8 @@
 
 {{>user-profile}}
+{{#unless profile_photo}}
+    {{> profile-photo-form}}
+{{/unless}}
 <div id="post-container">
 
     {{#if brags.length}}
@@ -16,7 +19,7 @@
 </div>
 
     
-    <div class="flex justify-center mb-14">
+    <div class="mb-14">
         <button class="btn btn-accent text-accent-content create my-8" data-id={{ id }}>Create New Post</button>
     </div>
         
