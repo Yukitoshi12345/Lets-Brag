@@ -29,8 +29,6 @@ router.get('/', async (req, res) => {
       brags,
       pageTitle: 'Home',
       loggedIn: req.session.loggedIn, // Pass login status
-      loggedInUser: req.session.user, // Pass logged-in username
-      loggedInUserPhoto: req.session.photo
     });
   } catch (error) {
     console.log(error); // Log any errors

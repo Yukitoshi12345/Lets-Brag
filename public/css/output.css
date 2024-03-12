@@ -898,6 +898,10 @@ html {
   margin-bottom: 1.5rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1154,6 +1158,14 @@ html {
           appearance: none;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1358,6 +1370,10 @@ html {
   text-align: right;
 }
 
+.align-bottom {
+  vertical-align: bottom;
+}
+
 .font-content {
   font-family: Barlow;
 }
@@ -1409,6 +1425,10 @@ html {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .leading-tight {
@@ -1520,6 +1540,40 @@ html {
 }
 
 /* Import custom components from Tailwind CSS */
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 
 .avatar {
   position: relative;
@@ -4869,6 +4923,10 @@ body {
 
   .md\:grid-cols-auto-fill {
     grid-template-columns: repeat(auto-fit, minmax(36em, 1fr));
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:flex-row-reverse {

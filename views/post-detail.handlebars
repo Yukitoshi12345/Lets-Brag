@@ -1,8 +1,8 @@
-<article class=" bg-neutral shadow-xl hover:opacity-90 px-6 py-3">
-    <figure class="flex justify-center "><img src="/images/{{post_photo}}" alt="{{title}}" class="max-w-screen-xl rounded-xl" />
+<article class=" card card-compact bg-neutral shadow-xl hover:opacity-90 px-6 py-3">
+    <figure class=" flex justify-center rounded-md "><img src="/images/{{post_photo}}" alt="{{title}}" class="rounded-xl"  />
     </figure>
-    <div>
-        <div class="flex justify-start gap-3 my-4">
+    <div class="card-body">
+        <div class=" flex flex-col justify-start gap-3 my-4 md:flex-row">
             <h2 class=" text-accent">{{ title }}</h2>
             {{>post-info}}
         </div>
