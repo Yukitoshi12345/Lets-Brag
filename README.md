@@ -141,8 +141,11 @@ npm run start
 
 - Creating Post
 - Commenting
-- Login
+- User Login
 - Rating
+
+#### ERD Diagram:
+![](/public/images/ERD.jpg)
 
 #### Motivation For Development:
 
