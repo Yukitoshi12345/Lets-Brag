@@ -5,7 +5,11 @@
         <div class=' col-span-1 flex-none gap-4 shadow-xl hover:opacity-90'>
           <div class='avatar inline-block'>
             <div class='w-12 mask mask-hexagon'>
-              <img src='/images/{{user.profile_photo}}'/>
+              {{#if user.profile_photo}}
+                <img src='/images/{{user.profile_photo}}'/>
+              {{else}}
+                <img src='/images/avatar.png'/>
+              {{/if}}
             </div>
           </div>
           <div class='inline-block'>
