@@ -818,16 +818,24 @@ html {
   top: 4rem;
 }
 
-.top-2\/3 {
-  top: 66.666667%;
-}
-
 .top-32 {
   top: 8rem;
 }
 
 .top-6 {
   top: 1.5rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.bottom-1\/3 {
+  bottom: 33.333333%;
+}
+
+.left-20 {
+  left: 5rem;
 }
 
 .-z-10 {
@@ -979,10 +987,6 @@ html {
 
 .max-w-screen-2xl {
   max-width: 1536px;
-}
-
-.max-w-screen-xl {
-  max-width: 1280px;
 }
 
 .max-w-sm {
@@ -1156,14 +1160,6 @@ html {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -1540,40 +1536,6 @@ html {
 }
 
 /* Import custom components from Tailwind CSS */
-
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
 
 .avatar {
   position: relative;
