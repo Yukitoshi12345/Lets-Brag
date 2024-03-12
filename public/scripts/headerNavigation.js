@@ -65,7 +65,6 @@ $(window).ready(() => {
   };
 
   const pageLoadHandler = async()=>{
-    let isReload = false;
     try {
       const response = await fetch('/api/users/', {
         method: 'GET',
@@ -75,8 +74,13 @@ $(window).ready(() => {
         const userData = await response.json(); // Parse JSON response
         const username = userData.username;
         const photo = userData.profile_photo;
+        if(photo){
+          loggedInUserPhotoEl.attr('src', `/images/${photo}`);
+        }else{
+          loggedInUserPhotoEl.attr('src', '/images/avatar.png');
+        }
         loggedInUserEl.text(`G'day, ${username}!` );
-        loggedInUserPhotoEl.attr('src', `/images/${photo}`);
+        
         
         headerEl.load();
         /* be careful below of recursive page refresh
@@ -88,6 +92,7 @@ $(window).ready(() => {
         //do nothing
         //user is not logged in
         //there is no session userId
+        
       }
     } catch (error) {
       console.log(error); // Log errors for debugging

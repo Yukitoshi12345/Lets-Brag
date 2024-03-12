@@ -1,31 +1,19 @@
 
 <div class="hero hover:opacity-70 rounded-md">
     <div class="hero-content flex-col md:flex-row-reverse">
-        {{#if user}}
-            <img src="/images/{{user.profile_photo}}" class="max-w-16 rounded-lg shadow-2xl" />
-            <div>
-                <h2 class=" font-bold text-accent">Welcome, {{user.username}}!</h2>
-                <div class="text-right">
-                    {{user.email}}
-                </div>
-            </div>
-        {{else}}
+        {{#if profile_photo}}
             <img src="/images/{{profile_photo}}" class="max-w-16 rounded-lg shadow-2xl" />
-            <div>
-                <h2 class=" font-bold text-accent">Welcome, {{username}}!</h2>
-                <div class="text-right">
-                    {{email}}
-                </div>
-            </div>
+        {{else}}
+            <img src="/images/avatar.png" class="max-w-16 rounded-lg shadow-2xl" />
         {{/if}}
+        <div>
+            <h2 class=" font-bold text-accent">Welcome, {{username}}!</h2>
+            <div class="text-right">
+                {{email}}
+            </div>
+        </div>
     </div>
 </div>
-{{#unless profile_photo}}
-    {{!-- <form enctype="multipart/form-data"> --}}
-    <form enctype="multipart/form-data" method='POST' action='/upload'>
-        <input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" name="avatar" />
-        <input type="submit" value="Upload " class="btn btn-accent">
-    </form>
-{{/unless}}
+
 
 {{!-- <script src="/scripts/userProfile.js" type="application/javascript"></script> --}}
