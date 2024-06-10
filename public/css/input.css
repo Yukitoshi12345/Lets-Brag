@@ -11,6 +11,7 @@
 body {
   width: 98%; /* Set body width to 98% */
   margin-inline: auto; /* Center the body content horizontally */
+  background-color: black;
 }
 
 /* Sliding animation element styles */
