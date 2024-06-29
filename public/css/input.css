@@ -7,11 +7,13 @@
 /* Import custom components from Tailwind CSS */
 @tailwind components;
 
+:root {
+  background-color: #1a1a2e;
+}
 /* Set body styles */
 body {
   width: 98%; /* Set body width to 98% */
   margin-inline: auto; /* Center the body content horizontally */
-  background-color: black;
 }
 
 /* Sliding animation element styles */
